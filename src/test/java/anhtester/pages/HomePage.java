@@ -4,6 +4,8 @@ import anhtester.common.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -43,9 +45,26 @@ public class HomePage {
 //============ Trang san pham ======================
     private By textOneProduct = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
 
+    private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
+    private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
+    private By viewDetailBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+    private By textTitleViewDetailProduct = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[1]/p[1]");
+
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void ViewProductDetail() throws InterruptedException {
+        WebElement viewQuickBtmvcBtnElement = driver.findElement(productFrameBtmvc);
+        Actions actions = new Actions(driver);
+        // Hover vào phần tử
+        actions.moveToElement(viewQuickBtmvcBtnElement).perform();
+        Thread.sleep(2000);
+        validateHelper.clickElement(viewQuickBtmvcBtn);
+        Thread.sleep(2000);
+        validateHelper.clickElement(viewDetailBtn);
+        Thread.sleep(2000);
     }
 
     public void SearchProduct(String product, String productOneText){

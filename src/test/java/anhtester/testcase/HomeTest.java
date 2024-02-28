@@ -39,6 +39,14 @@ public class HomeTest {
     }
 
     @Test (priority = 1)
+    public void ViewProductDetail() throws Exception {
+
+        driver.get("http://127.0.0.1:3000/");
+        homePage.goToProductPage();
+        homePage.ViewProductDetail();
+    }
+
+    @Test (priority = 5)
     public void SearchProduct() throws Exception {
         driver.get("http://127.0.0.1:3000/");
         homePage.SearchProduct("Vòng tay", "Vòng tay thời tiết - mây và cầu vồng");
