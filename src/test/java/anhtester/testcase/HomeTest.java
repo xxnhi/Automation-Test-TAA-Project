@@ -37,6 +37,15 @@ public class HomeTest {
         Thread.sleep(2000);
         driver.quit();
     }
+
+    @Test(priority = 1)
+    public void Register() throws Exception {
+        driver.get("http://127.0.0.1:3000/");
+        validateHelper.waitForPageLoaded();
+        homePage.goToRegisterPopup();
+        homePage.Register("","","","","","Vui lòng nhập tất cả các trường");
+    }
+
     @Test(priority = 2)
     public void SignInTAA() throws Exception {
 

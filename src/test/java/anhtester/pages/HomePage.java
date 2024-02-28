@@ -13,7 +13,7 @@ public class HomePage {
     private WebDriver driver;
     private ValidateHelper validateHelper;
     private WebDriverWait wait;
-
+//======== dang nhap ===============
     private By loginBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/button[1]/span[1]");
 
     private By registerBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/button[2]/span[1]");
@@ -23,10 +23,42 @@ public class HomePage {
     private By loginSubmitBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/button[1]/span[1]");
 
     private By loginImg = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/img[1]");
+//====================== dang ky =================
+
+    private By textReg = By.xpath("//h1[contains(text(),'Đăng ký')]");
+    private By regBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/button[2]/span[1]");
+    private By regFullNameInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/input[1]");
+    private By regPhoneInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[2]/div[1]/input[1]");
+    private By regEmailInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[3]/div[1]/input[1]");
+    private By regPasswordInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[4]/div[1]/span[1]/input[1]");
+    private By regRepasswordInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[5]/div[1]/span[1]/input[1]");
+    private By checkLabel = By.xpath("//body/div[@id='main']/div[@id='modal--register']/div[1]/form[1]/div[6]/div[1]/span[1]/label[1]");
+    private By regSubmitBtn= By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/button[1]/span[1]");
+
+
 
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToRegisterPopup(){
+        validateHelper.waitForPageLoaded();
+        validateHelper.clickElement(regBtn);
+    }
+
+    public void Register(String fullname, String phone, String email, String pass, String repass, String alertNoti){
+        validateHelper.waitForPageLoaded();
+        Assert.assertTrue(validateHelper.verifyElementText(textReg,"Đăng ký"),"Không phải popup Đăng ký");
+        validateHelper.setText(regFullNameInput, fullname);
+        validateHelper.setText(regPhoneInput, phone);
+        validateHelper.setText(regEmailInput, email);
+        validateHelper.setText(regPasswordInput, pass);
+        validateHelper.setText(regRepasswordInput, repass);
+        validateHelper.clickElement(checkLabel);
+        validateHelper.clickElement(regSubmitBtn);
+        validateHelper.isAlertTitleMatching(alertNoti);
+
     }
 
     public void goToSignInPopup(){
