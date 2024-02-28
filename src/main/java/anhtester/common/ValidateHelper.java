@@ -1,9 +1,6 @@
 package anhtester.common;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -143,6 +140,33 @@ public class ValidateHelper {
         return false;
     }
 
+    public boolean isAlertPresent(){
+        try{
+            driver.switchTo().alert();
+            return true;
+        } catch(NoAlertPresentException e){
+            return false;
+        }
+    }
+
+    public boolean isAlertTitleMatching(String expectedTitle) {
+        if (isAlertPresent()) {
+            try {
+                Alert alert = driver.switchTo().alert();
+                String actualTitle = alert.getText();
+                alert.accept(); // Đóng cửa sổ cảnh báo sau khi lấy tiêu đề
+                return actualTitle.equals(expectedTitle);
+            } catch (NoAlertPresentException e) {
+                // Trường hợp cửa sổ cảnh báo không còn tồn tại
+                return false;
+            }
+        } else {
+            return false; // Không có cửa sổ cảnh báo nào xuất hiện
+        }
+    }
+
+
+
     public void waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
@@ -151,7 +175,6 @@ public class ValidateHelper {
             }
         };
         try {
-            Thread.sleep(1000);
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             wait.until(expectation);
         } catch (Throwable error) {

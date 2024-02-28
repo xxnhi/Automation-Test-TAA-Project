@@ -34,13 +34,13 @@ public class HomePage {
         validateHelper.clickElement(loginBtn);
     }
 
-    public void SignIn (String phone, String password){
+    public void SignIn (String phone, String password, String alertNoti){
         validateHelper.waitForPageLoaded();
         Assert.assertTrue(validateHelper.verifyElementText(loginSubmitBtn,"Đăng nhập"),"Không phải popup Đăng nhập");
         validateHelper.setText(phoneInput, phone);
         validateHelper.setText(passwordInput, password);
         validateHelper.clickElement(loginSubmitBtn);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginImg));
+        validateHelper.isAlertTitleMatching(alertNoti);
     }
 
 }
