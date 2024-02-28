@@ -43,7 +43,30 @@ public class HomeTest {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
+        //data 1
         homePage.Register("","","","","","Vui lòng nhập tất cả các trường");
+        //data 2
+        homePage.Register("","0933863327","xuannhi@gmail.com","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
+        //data 3
+        homePage.Register("Xuan Nhi","","xuannhi@gmail.com","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
+        //data 4
+        homePage.Register("Xuan Nhi","0933863327","","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
+        //data 5
+        homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","","Abcd@123","Vui lòng nhập tất cả các trường");
+        //data 6
+        homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","Abcd@123","","Vui lòng nhập tất cả các trường");
+        //data 7
+        homePage.Register("Xuan Nhi","0933863327","xuannhi","Abcd@123","Abcd@123","Email không hợp lệ");
+        //data 8
+        homePage.Register("Xuan Nhi","0","xuannhi@gmail.com","Abcd@123","Abcd@123","Số điện thoại không hợp lệ");
+        //data 9
+        homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","123","123","Mật khẩu phải có ít nhất 8 ký tự, bao gồm cả chữ và số, không có dấu cách và ký tự đặc biệt");
+        //data 10
+        homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","123","Abcd@12345","Mật khẩu và Xác nhận mật khẩu phải giống nhau");
+        //data 11
+        homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","Abcd@123","Abcd@12345","Mật khẩu và Xác nhận mật khẩu phải giống nhau");
+        //data 12
+        homePage.Register("Xuan Nhi","0933863337","xini@gmail.com","Abcd@123","Abcd@123","Đăng ký thành công. Vui lòng đăng nhập");
     }
 
     @Test(priority = 2)

@@ -154,8 +154,9 @@ public class ValidateHelper {
             try {
                 Alert alert = driver.switchTo().alert();
                 String actualTitle = alert.getText();
+                System.out.println(actualTitle);
                 alert.accept(); // Đóng cửa sổ cảnh báo sau khi lấy tiêu đề
-                return actualTitle.equals(expectedTitle);
+                return actualTitle != null && !actualTitle.isEmpty() && actualTitle.equals(expectedTitle);
             } catch (NoAlertPresentException e) {
                 // Trường hợp cửa sổ cảnh báo không còn tồn tại
                 return false;
@@ -175,6 +176,7 @@ public class ValidateHelper {
             }
         };
         try {
+//            Thread.sleep(1000);
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             wait.until(expectation);
         } catch (Throwable error) {
