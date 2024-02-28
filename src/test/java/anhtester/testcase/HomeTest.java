@@ -39,6 +39,14 @@ public class HomeTest {
     }
 
     @Test(priority = 1)
+    public void ViewProduct() throws Exception {
+        driver.get("http://127.0.0.1:3000/");
+        validateHelper.waitForPageLoaded();
+        homePage.goToProductPage();
+        homePage.ViewProduct();
+    }
+
+    @Test(priority = 3)
     public void Register() throws Exception {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();

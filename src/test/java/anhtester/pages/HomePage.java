@@ -2,6 +2,7 @@ package anhtester.pages;
 
 import anhtester.common.ValidateHelper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,12 +35,44 @@ public class HomePage {
     private By regRepasswordInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[5]/div[1]/span[1]/input[1]");
     private By checkLabel = By.xpath("//body/div[@id='main']/div[@id='modal--register']/div[1]/form[1]/div[6]/div[1]/span[1]/label[1]");
     private By regSubmitBtn= By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/button[1]/span[1]");
-
+//============ Trang san pham ==============
+    private By productMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[2]/a[1]");
 
 
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToProductPage(){
+        validateHelper.waitForPageLoaded();
+        validateHelper.clickElement(productMenu);
+    }
+
+    public void ViewProduct(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        // Lấy chiều cao của trang
+        Long pageHeight = (Long) js.executeScript("return document.body.scrollHeight");
+
+        // Số lần cuộn tối đa (tùy chọn)
+        int maxScrolls = 10;
+
+        // Chiều cao cần cuộn mỗi lần
+        int scrollHeight = pageHeight.intValue() / maxScrolls;
+
+        // Cuộn từ từ
+        for (int i = 0; i < maxScrolls; i++) {
+            // Cuộn đến vị trí mới
+            js.executeScript("window.scrollBy(0, " + scrollHeight + ")");
+
+            // Tạm dừng một chút để có hiệu ứng cuộn
+            try {
+                Thread.sleep(500); // Đợi 500ms trước khi cuộn tiếp
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void goToRegisterPopup(){
