@@ -35,17 +35,27 @@ public class HomePage {
     private By regRepasswordInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/div[5]/div[1]/span[1]/input[1]");
     private By checkLabel = By.xpath("//body/div[@id='main']/div[@id='modal--register']/div[1]/form[1]/div[6]/div[1]/span[1]/label[1]");
     private By regSubmitBtn= By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/button[1]/span[1]");
-//============ Trang san pham ==============
+//============ Thanh menu ==============
     private By productMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[2]/a[1]");
+    private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
+    private By searchBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/button[1]/span[1]");
 
+//============ Trang san pham ======================
+    private By textOneProduct = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
 
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
     }
 
+    public void SearchProduct(String product, String productOneText){
+        validateHelper.setText(searchInput, product);
+        validateHelper.clickElement(searchBtn);
+        validateHelper.verifyElementText(textOneProduct, productOneText);
+
+    }
+
     public void goToProductPage(){
-        validateHelper.waitForPageLoaded();
         validateHelper.clickElement(productMenu);
     }
 

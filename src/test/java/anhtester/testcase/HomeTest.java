@@ -38,7 +38,15 @@ public class HomeTest {
         driver.quit();
     }
 
-    @Test(priority = 1)
+    @Test (priority = 1)
+    public void SearchProduct() throws Exception {
+        driver.get("http://127.0.0.1:3000/");
+        homePage.SearchProduct("Vòng tay", "Vòng tay thời tiết - mây và cầu vồng");
+        homePage.SearchProduct("Vòng cổ","Vòng cổ choker đính ngọc trai sành điệu");
+        homePage.SearchProduct("Túi","Túi Đeo Vai Nữ");
+    }
+
+    @Test(priority = 4)
     public void ViewProduct() throws Exception {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
