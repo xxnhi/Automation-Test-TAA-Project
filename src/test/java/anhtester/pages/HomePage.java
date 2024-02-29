@@ -42,6 +42,9 @@ public class HomePage {
     private By articleMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[3]/a[1]");
     private By aboutUsMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[4]/a[1]");
 
+    private By avatarImg = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/img[1]");
+    private By profileOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
+
     private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
     private By searchBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/button[1]/span[1]");
 
@@ -50,16 +53,41 @@ public class HomePage {
 
     private By textTitleViewDetailProduct = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[1]/p[1]");
 
+    private By trangSucLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/span[1]");
+    private By vongTayLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[2]/span[1]");
+    private By nhanLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[4]/span[1]");
+
+    private By phuKienTocLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/span[1]");
+    private By tramCaiLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/ul[1]/li[4]/span[1]");
+
+
+
 //============ Trang tin tuc =======================
 
     private By article1Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[1]/div[1]/div[1]/a[1]");
     private By article2Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[2]/div[1]/div[1]/a[1]");
     private By article3Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[3]/div[1]/div[1]/a[1]");
 
-
+//=========== Trang ca nhan ========================
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToAccountPage(){
+        validateHelper.clickElement(avatarImg);
+        validateHelper.clickElement(profileOptions);
+    }
+
+    public void FilterProduct(){
+        // loc sp "Vong tay"
+        validateHelper.clickElement(trangSucLeftMenu);
+        validateHelper.clickElement(vongTayLeftMenu);
+        //loc sp "Nhan"
+        validateHelper.clickElement(nhanLeftMenu);
+        //loc sp "Tram cai
+        validateHelper.clickElement(phuKienTocLeftMenu);
+        validateHelper.clickElement(tramCaiLeftMenu);
     }
 
     public void goToArticlePage(){

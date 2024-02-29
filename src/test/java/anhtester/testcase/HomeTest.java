@@ -56,6 +56,13 @@ public class HomeTest {
     }
 
     @Test (priority = 1)
+    public void FilterProduct() {
+        driver.get("http://127.0.0.1:3000/");
+        homePage.goToProductPage();
+        homePage.FilterProduct();
+
+    }
+    @Test (priority = 8)
     public void ViewArticle() throws Exception {
         driver.get("http://127.0.0.1:3000/");
         homePage.goToArticlePage();
