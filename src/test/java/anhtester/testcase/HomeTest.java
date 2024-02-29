@@ -50,6 +50,13 @@ public class HomeTest {
     }
 
     @Test (priority = 1)
+    public void ViewArticleList()   throws Exception {
+        driver.get("http://127.0.0.1:3000/");
+        homePage.goToArticlePage();
+        homePage.ScrollToEnd();
+    }
+
+    @Test (priority = 6)
     public void ViewProductDetail() throws Exception {
 
         driver.get("http://127.0.0.1:3000/");
@@ -74,7 +81,7 @@ public class HomeTest {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToProductPage();
-        homePage.ViewProduct();
+        homePage.ScrollToEnd();
     }
 
     @Test(priority = 3)

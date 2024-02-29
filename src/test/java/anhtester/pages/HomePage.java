@@ -39,6 +39,9 @@ public class HomePage {
     private By regSubmitBtn= By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/form[1]/button[1]/span[1]");
 //============ Thanh menu ==============
     private By productMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[2]/a[1]");
+    private By articleMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[3]/a[1]");
+    private By aboutUsMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[4]/a[1]");
+
     private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
     private By searchBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/button[1]/span[1]");
 
@@ -50,6 +53,10 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToArticlePage(){
+        validateHelper.clickElement(articleMenu);
     }
 
     public void ViewProductDetail(By productFrame, By viewQuickBtn, By viewDetailBtn) throws InterruptedException {
@@ -75,7 +82,7 @@ public class HomePage {
         validateHelper.clickElement(productMenu);
     }
 
-    public void ViewProduct(){
+    public void ScrollToEnd(){
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         // Lấy chiều cao của trang
