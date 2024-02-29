@@ -29,7 +29,13 @@ public class HomeTest {
     private By viewDetailBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By viewDetailVtnsmnBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By viewDetailVtttmvcvBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
-    
+    //============ Trang tin tuc =======================
+    private By pictureArticle = By.xpath("/html[1]/body[1]/div[1]/main[1]/div[1]/div[1]/img[1]");
+
+    private By article1Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[1]/div[1]/div[1]/a[1]");
+    private By article2Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[2]/div[1]/div[1]/a[1]");
+    private By article3Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[3]/div[1]/div[1]/a[1]");
+
     @BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -50,6 +56,27 @@ public class HomeTest {
     }
 
     @Test (priority = 1)
+    public void ViewArticle() throws Exception {
+        driver.get("http://127.0.0.1:3000/");
+        homePage.goToArticlePage();
+        validateHelper.scrollToElement(pictureArticle);
+        validateHelper.clickElement(article1Text);
+        homePage.ScrollToEnd();
+
+        homePage.goToArticlePage();
+        validateHelper.scrollToElement(pictureArticle);
+        validateHelper.clickElement(article2Text);
+        homePage.ScrollToEnd();
+
+
+        homePage.goToArticlePage();
+        validateHelper.scrollToElement(pictureArticle);
+        validateHelper.clickElement(article3Text);
+        homePage.ScrollToEnd();
+        
+    }
+
+    @Test (priority = 7)
     public void ViewArticleList()   throws Exception {
         driver.get("http://127.0.0.1:3000/");
         homePage.goToArticlePage();

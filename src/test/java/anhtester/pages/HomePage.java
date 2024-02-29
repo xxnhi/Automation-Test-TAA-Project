@@ -50,6 +50,13 @@ public class HomePage {
 
     private By textTitleViewDetailProduct = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[1]/p[1]");
 
+//============ Trang tin tuc =======================
+
+    private By article1Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[1]/div[1]/div[1]/a[1]");
+    private By article2Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[2]/div[1]/div[1]/a[1]");
+    private By article3Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[3]/div[1]/div[1]/a[1]");
+
+
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);

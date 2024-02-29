@@ -166,6 +166,10 @@ public class ValidateHelper {
         }
     }
 
+    public void scrollToElement(By element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(element));
+    }
 
 
     public void waitForPageLoaded() {
