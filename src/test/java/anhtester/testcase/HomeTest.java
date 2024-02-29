@@ -17,8 +17,19 @@ public class HomeTest {
     private ValidateHelper validateHelper;
     private HomePage homePage;
 
-    private By loginSubmitBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/button[1]/span[1]");
+//    private By loginSubmitBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/button[1]/span[1]");
+    private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
+    private By productFrameVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]");
+    private By productFrameVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]");
+    private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
 
+    private By viewQuickVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[3]/div[1]");
+    private By viewQuickVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
+
+    private By viewDetailBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+    private By viewDetailVtnsmnBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+    private By viewDetailVtttmvcvBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+    
     @BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -43,7 +54,11 @@ public class HomeTest {
 
         driver.get("http://127.0.0.1:3000/");
         homePage.goToProductPage();
-        homePage.ViewProductDetail();
+        homePage.ViewProductDetail(productFrameBtmvc, viewQuickBtmvcBtn, viewDetailBtmvcBtn);
+        homePage.goToProductPage();
+        homePage.ViewProductDetail(productFrameVtnsmn, viewQuickVtnsmn, viewDetailVtnsmnBtn);
+        homePage.goToProductPage();
+        homePage.ViewProductDetail(productFrameVtttmvcv, viewQuickVtttmvcv, viewDetailVtttmvcvBtn);
     }
 
     @Test (priority = 5)

@@ -45,9 +45,6 @@ public class HomePage {
 //============ Trang san pham ======================
     private By textOneProduct = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
 
-    private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
-    private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
-    private By viewDetailBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By textTitleViewDetailProduct = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[1]/div[1]/div[1]/div[2]/div[1]/p[1]");
 
     public HomePage(WebDriver driver){
@@ -55,13 +52,13 @@ public class HomePage {
         validateHelper = new ValidateHelper(driver);
     }
 
-    public void ViewProductDetail() throws InterruptedException {
-        WebElement viewQuickBtmvcBtnElement = driver.findElement(productFrameBtmvc);
+    public void ViewProductDetail(By productFrame, By viewQuickBtn, By viewDetailBtn) throws InterruptedException {
+        WebElement viewQuickBtmvcBtnElement = driver.findElement(productFrame);
         Actions actions = new Actions(driver);
         // Hover vào phần tử
         actions.moveToElement(viewQuickBtmvcBtnElement).perform();
         Thread.sleep(2000);
-        validateHelper.clickElement(viewQuickBtmvcBtn);
+        validateHelper.clickElement(viewQuickBtn);
         Thread.sleep(2000);
         validateHelper.clickElement(viewDetailBtn);
         Thread.sleep(2000);
