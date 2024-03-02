@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AccountPage {
     private WebDriver driver;
     private ValidateHelper validateHelper;
+    private HomePage homePage;
     private WebDriverWait wait;
     private By profileTile = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/article[2]/h2[1]");
 
@@ -23,6 +24,11 @@ public class AccountPage {
     public AccountPage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+        homePage = new HomePage(driver);
+    }
+
+    public void ViewOrderHistory(){
+        homePage.ScrollToEnd();
     }
 
     public void goToChangePasswordPopup() throws InterruptedException {

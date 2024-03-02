@@ -47,6 +47,9 @@ public class HomePage {
 
     private By logOutOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]");
 
+    private By orderOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[2]");
+
+    private By favoriteProductOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[3]");
     private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
     private By searchBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/button[1]/span[1]");
 
@@ -76,6 +79,14 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToOrderPage(){
+        Actions actions = new Actions(driver);
+        WebElement avatarImgElement = driver.findElement(avatarImg);
+        // Hover vào phần tử
+        actions.moveToElement(avatarImgElement).perform();
+        validateHelper.clickElement(orderOptions);
     }
 
     public void LogOut(){

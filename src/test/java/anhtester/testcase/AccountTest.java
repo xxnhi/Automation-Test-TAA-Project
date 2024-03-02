@@ -53,7 +53,12 @@ public class AccountTest {
         // data 5
         homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
     }
-    @Test(priority = 2)
+    @Test (priority = 2)
+    public void ViewOrderHistory(){
+        homePage.goToOrderPage();
+        accountPage.ViewOrderHistory();
+    }
+    @Test(priority = 3)
     public void ChangePassword() throws Exception {
         homePage.goToAccountPage();
         accountPage.goToChangePasswordPopup();
