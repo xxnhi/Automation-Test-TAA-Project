@@ -42,7 +42,7 @@ public class HomePage {
     private By articleMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[3]/a[1]");
     private By aboutUsMenu = By.xpath("/html[1]/body[1]/div[1]/header[1]/nav[1]/div[1]/ul[1]/li[4]/a[1]");
 
-    private By avatarImg = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/img[1]");
+    private By avatarImg = By.xpath("//header/div[1]/div[1]/div[1]/div[1]");
     private By profileOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
 
     private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
@@ -75,7 +75,11 @@ public class HomePage {
     }
 
     public void goToAccountPage(){
-        validateHelper.clickElement(avatarImg);
+        Actions actions = new Actions(driver);
+        WebElement avatarImgElement = driver.findElement(avatarImg);
+        // Hover vào phần tử
+        actions.moveToElement(avatarImgElement).perform();
+//        validateHelper.clickElement(avatarImg);
         validateHelper.clickElement(profileOptions);
     }
 
@@ -159,7 +163,6 @@ public class HomePage {
         validateHelper.clickElement(checkLabel);
         validateHelper.clickElement(regSubmitBtn);
         validateHelper.isAlertTitleMatching(alertNoti);
-
     }
 
     public void goToSignInPopup(){
@@ -167,12 +170,13 @@ public class HomePage {
         validateHelper.clickElement(loginBtn);
     }
 
-    public void SignIn (String phone, String password, String alertNoti){
+    public void SignIn (String phone, String password, String alertNoti) throws InterruptedException {
         validateHelper.waitForPageLoaded();
         Assert.assertTrue(validateHelper.verifyElementText(loginSubmitBtn,"Đăng nhập"),"Không phải popup Đăng nhập");
         validateHelper.setText(phoneInput, phone);
         validateHelper.setText(passwordInput, password);
         validateHelper.clickElement(loginSubmitBtn);
+        Thread.sleep(5000);
         validateHelper.isAlertTitleMatching(alertNoti);
     }
 

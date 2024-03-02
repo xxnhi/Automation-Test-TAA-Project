@@ -9,6 +9,7 @@ public class AccountPage {
     private WebDriver driver;
     private ValidateHelper validateHelper;
     private WebDriverWait wait;
+    private By profileTile = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/article[2]/h2[1]");
 
     private By changePassBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/article[3]/button[1]/span[1]");
 
@@ -24,8 +25,9 @@ public class AccountPage {
         validateHelper = new ValidateHelper(driver);
     }
 
-    public void goToChangePasswordPopup(){
-        validateHelper.scrollToElement(changePassBtn);
+    public void goToChangePasswordPopup() throws InterruptedException {
+        validateHelper.scrollToElement(profileTile);
+        Thread.sleep((3000));
         validateHelper.clickElement(changePassBtn);
     }
 

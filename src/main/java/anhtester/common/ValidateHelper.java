@@ -165,6 +165,15 @@ public class ValidateHelper {
             return false; // Không có cửa sổ cảnh báo nào xuất hiện
         }
     }
+    public void handleAlert() {
+        if (isAlertPresent()) {
+            Alert alert = driver.switchTo().alert();
+            System.out.println("Alert Text ne: " + alert.getText());
+            alert.accept();
+
+        }
+    }
+
 
     public void scrollToElement(By element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -4,6 +4,7 @@ import anhtester.common.ValidateHelper;
 import anhtester.pages.AccountPage;
 import anhtester.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -36,9 +37,30 @@ public class AccountTest {
     }
 
     @Test(priority = 1)
+    public void SignInTAA() throws Exception {
+
+        driver.get("http://127.0.0.1:3000/");
+        validateHelper.waitForPageLoaded();
+        homePage.goToSignInPopup();
+        //data 1
+//    homePage.SignIn("","","Vui lòng nhập tất cả các trường");
+//    //data 2
+//    homePage.SignIn("","Abcd@123","Vui lòng nhập tất cả các trường");
+//    //data 3
+//    homePage.SignIn("0","Abcd@123","Số điện thoại chưa được đăng ký");
+        //data 4
+//        homePage.SignIn("0933863327","123456","Mật khẩu không chính xác");
+        // data 5
+        homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
+    }
+    @Test(priority = 2)
     public void ChangePassword() throws Exception {
         homePage.goToAccountPage();
+        accountPage.goToChangePasswordPopup();
         accountPage.ChangePassword("","","");
-
+        accountPage.ChangePassword("xuannhi","Xuannhi27","Xuannhi27");
+        accountPage.ChangePassword("Abcd@123","Xuannhi","Xuannhi27");
+        accountPage.ChangePassword("Abcd@123","Abcd@123","Abcd@123");
+        accountPage.ChangePassword("Abcd@123","Xuannhi27","Xuannhi27");
     }
 }
