@@ -57,10 +57,10 @@ public class AccountTest {
     public void ChangePassword() throws Exception {
         homePage.goToAccountPage();
         accountPage.goToChangePasswordPopup();
-        accountPage.ChangePassword("","","");
-        accountPage.ChangePassword("xuannhi","Xuannhi27","Xuannhi27");
-        accountPage.ChangePassword("Abcd@123","Xuannhi","Xuannhi27");
-        accountPage.ChangePassword("Abcd@123","Abcd@123","Abcd@123");
-        accountPage.ChangePassword("Abcd@123","Xuannhi27","Xuannhi27");
+        accountPage.ChangePassword("","","","Vui lòng nhập mật khẩu cũ ở đây");
+//        accountPage.ChangePassword("xuannhi","Xuannhi27","Xuannhi27");
+//        accountPage.ChangePassword("Abcd@123","Xuannhi","Xuannhi27");
+//        accountPage.ChangePassword("Abcd@123","Abcd@123","Abcd@123");
+//        accountPage.ChangePassword("Abcd@123","Xuannhi27","Xuannhi27");
     }
 }

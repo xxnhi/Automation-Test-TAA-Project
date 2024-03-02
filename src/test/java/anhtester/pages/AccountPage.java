@@ -31,12 +31,24 @@ public class AccountPage {
         validateHelper.clickElement(changePassBtn);
     }
 
-    public void ChangePassword(String oldPass, String newPass, String confirmPass){
+    public boolean placeholderToPass(String textToMatch) {
+        String placeholderOldPass = driver.findElement(oldPassInput).getAttribute("placeholder");
+        String placeholderNewPass = driver.findElement(newPassInput).getAttribute("placeholder");
+        String placeholderConPass = driver.findElement(confirmPassInput).getAttribute("placeholder");
+
+        return placeholderOldPass.equals(textToMatch) ||
+                placeholderNewPass.equals(textToMatch) ||
+                placeholderConPass.equals(textToMatch);
+
+    }
+
+    public void ChangePassword(String oldPass, String newPass, String confirmPass, String placeholderText){
         validateHelper.waitForPageLoaded();
         validateHelper.setText(oldPassInput, oldPass);
         validateHelper.setText(newPassInput, newPass);
         validateHelper.setText(confirmPassInput, confirmPass);
         validateHelper.clickElement(confirmBtn);
+        placeholderToPass(placeholderText);
 
     }
 }

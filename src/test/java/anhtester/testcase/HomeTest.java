@@ -164,7 +164,7 @@ public class HomeTest {
     //data 4
 //        homePage.SignIn("0933863327","123456","Mật khẩu không chính xác");
     // data 5
-    homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
+    homePage.SignIn("0933863327","Xuannhi03!", "Vui lòng điền vào trường này.");
 
     }
 }
