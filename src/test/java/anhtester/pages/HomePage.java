@@ -45,8 +45,12 @@ public class HomePage {
     private By avatarImg = By.xpath("//header/div[1]/div[1]/div[1]/div[1]");
     private By profileOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]");
 
+    private By logOutOptions = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/div[1]/span[1]");
+
     private By searchInput = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/input[1]");
     private By searchBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/form[1]/span[1]/button[1]/span[1]");
+
+    private By acceptLogOutBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[2]/span[1]");
 
 //============ Trang san pham ======================
     private By textOneProduct = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
@@ -73,6 +77,19 @@ public class HomePage {
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
     }
+
+    public void LogOut(){
+        validateHelper.clickElement(acceptLogOutBtn);
+    }
+
+    public void goToLogOutPopup(){
+        Actions actions = new Actions(driver);
+        WebElement avatarImgElement = driver.findElement(avatarImg);
+        // Hover vào phần tử
+        actions.moveToElement(avatarImgElement).perform();
+        validateHelper.clickElement(logOutOptions);
+    }
+
 
     public void goToAccountPage(){
         Actions actions = new Actions(driver);

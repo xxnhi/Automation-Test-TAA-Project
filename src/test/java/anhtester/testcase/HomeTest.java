@@ -55,7 +55,13 @@ public class HomeTest {
         driver.quit();
     }
 
-    @Test (priority = 1)
+    @Test (priority = 2)
+    public void LogOut() throws Exception {
+        homePage.goToLogOutPopup();
+        homePage.LogOut();
+    }
+
+    @Test (priority = 9)
     public void FilterProduct() {
         driver.get("http://127.0.0.1:3000/");
         homePage.goToProductPage();
@@ -149,7 +155,7 @@ public class HomeTest {
         homePage.Register("Xuan Nhi","0933863337","xini@gmail.com","Abcd@123","Abcd@123","Đăng ký thành công. Vui lòng đăng nhập");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void SignInTAA() throws Exception {
 
     driver.get("http://127.0.0.1:3000/");

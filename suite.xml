@@ -6,16 +6,12 @@
 
     <test name="test">
         <classes>
-            <class name="anhtester.testcase.SignInTest">
+            <class name="anhtester.testcase.HomeTest">
                 <methods>
-                    <include name="signIn" />
-                </methods>
-
-                <methods>
-                    <include name="projectTest" />
+                    <include name="SignInTAA" />
+                    <include name="LogOut" />
                 </methods>
             </class>
-
         </classes>
     </test>
 </suite>
