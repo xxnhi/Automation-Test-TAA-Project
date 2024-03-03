@@ -9,7 +9,7 @@
             <class name="anhtester.testcase.HomeTest">
                 <methods>
                     <include name="SignInTAA" />
-                    <include name="LogOut" />
+                    <include name="AddProductToCart" />
                 </methods>
             </class>
         </classes>

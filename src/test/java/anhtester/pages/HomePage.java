@@ -55,6 +55,8 @@ public class HomePage {
 
     private By acceptLogOutBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[2]/span[1]");
 
+    private By cartBtn = By.xpath("/html[1]/body[1]/div[1]/header[1]/div[1]/div[1]/div[1]/button[1]");
+
 //============ Trang san pham ======================
     private By textOneProduct = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
 
@@ -67,6 +69,7 @@ public class HomePage {
     private By phuKienTocLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/span[1]");
     private By tramCaiLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/ul[1]/li[4]/span[1]");
 
+    private By addCartBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/button[1]");
 
 
 //============ Trang tin tuc =======================
@@ -79,6 +82,24 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void goToCartPage() throws InterruptedException {
+        Actions actions = new Actions(driver);
+
+        // Xác định phần tử cần nhấp chuột
+        WebElement CartButton = driver.findElement(cartBtn);
+
+        // Sử dụng Actions để nhấp chuột vào phần tử
+        actions.click(CartButton).perform();
+//        validateHelper.clickElement(cartBtn);
+    }
+
+    public void AddProductToCart() throws InterruptedException {
+        validateHelper.clickElement(addCartBtn);
+        Thread.sleep(5000);
+        System.out.println("da nhan duoc nut them vao gio hang");
+
     }
 
     public void goToOrderPage(){
@@ -126,13 +147,22 @@ public class HomePage {
         validateHelper.clickElement(articleMenu);
     }
 
-    public void ViewProductDetail(By productFrame, By viewQuickBtn, By viewDetailBtn) throws InterruptedException {
-        WebElement viewQuickBtmvcBtnElement = driver.findElement(productFrame);
+    public void ViewQuickDetail(By productFrame,  By viewQuickBtn){
+        WebElement viewQuickBtnElement = driver.findElement(productFrame);
         Actions actions = new Actions(driver);
         // Hover vào phần tử
-        actions.moveToElement(viewQuickBtmvcBtnElement).perform();
-        Thread.sleep(2000);
+        actions.moveToElement(viewQuickBtnElement).perform();
         validateHelper.clickElement(viewQuickBtn);
+    }
+
+    public void ViewProductDetail(By productFrame, By viewQuickBtn, By viewDetailBtn) throws InterruptedException {
+//        WebElement viewQuickBtmvcBtnElement = driver.findElement(productFrame);
+//        Actions actions = new Actions(driver);
+//        // Hover vào phần tử
+//        actions.moveToElement(viewQuickBtmvcBtnElement).perform();
+//        Thread.sleep(2000);
+//        validateHelper.clickElement(viewQuickBtn);
+        ViewQuickDetail(productFrame,viewQuickBtn);
         Thread.sleep(2000);
         validateHelper.clickElement(viewDetailBtn);
         Thread.sleep(2000);

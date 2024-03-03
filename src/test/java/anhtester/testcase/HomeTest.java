@@ -21,10 +21,14 @@ public class HomeTest {
     private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
     private By productFrameVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]");
     private By productFrameVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]");
+
+    private By productFrameVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]");
     private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
 
     private By viewQuickVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[3]/div[1]");
     private By viewQuickVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
+
+    private By viewQuickVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]");
 
     private By viewDetailBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By viewDetailVtnsmnBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
@@ -54,8 +58,15 @@ public class HomeTest {
         Thread.sleep(2000);
         driver.quit();
     }
+    @Test(priority = 2)
+    public void AddProductToCart() throws Exception {
+        homePage.goToProductPage();
+        homePage.ViewQuickDetail(productFrameVcmcnmdt,viewQuickVcmcnmdt);
+        homePage.AddProductToCart();
+        homePage.goToCartPage();
+    }
 
-    @Test (priority = 2)
+    @Test (priority = 10)
     public void LogOut() throws Exception {
         homePage.goToLogOutPopup();
         homePage.LogOut();
