@@ -85,6 +85,14 @@ public class HomePage {
         validateHelper = new ValidateHelper(driver);
     }
 
+    public void goToFavoriteProductPage(){
+        Actions actions = new Actions(driver);
+        WebElement avatarImgElement = driver.findElement(avatarImg);
+        // Hover vào phần tử
+        actions.moveToElement(avatarImgElement).perform();
+        validateHelper.clickElement(favoriteProductOptions);
+    }
+
     public void BuyQuickProduct(By productFrame){
         WebElement viewQuickBtnElement = driver.findElement(productFrame);
         Actions actions = new Actions(driver);

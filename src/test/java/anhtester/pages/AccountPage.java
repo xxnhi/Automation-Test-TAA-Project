@@ -27,6 +27,12 @@ public class AccountPage {
         homePage = new HomePage(driver);
     }
 
+    public void ViewFavoriteProduct(){
+        homePage.goToFavoriteProductPage();
+        homePage.ScrollToEnd();
+    }
+
+
     public void ViewOrderHistory(){
         homePage.ScrollToEnd();
     }
