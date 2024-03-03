@@ -60,6 +60,11 @@ public class HomeTest {
     }
 
     @Test (priority = 2)
+    public void ViewCartPage() throws InterruptedException {
+        homePage.goToCartPage();
+    }
+
+    @Test (priority = 12)
     public void BuyQuickProducts() throws Exception {
         homePage.goToProductPage();
         homePage.BuyQuickProduct(productFrameVcmcnmdt);

@@ -109,7 +109,7 @@ public class HomePage {
 
         // Sử dụng Actions để nhấp chuột vào phần tử
         actions.click(CartButton).perform();
-//        validateHelper.clickElement(cartBtn);
+        validateHelper.clickElement(cartBtn);
     }
 
     public void AddProductToCart() throws InterruptedException {
