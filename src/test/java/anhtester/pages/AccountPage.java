@@ -20,12 +20,31 @@ public class AccountPage {
     private By confirmPassInput = By.xpath("/html[1]/body[1]/div[1]/div[9]/div[1]/form[1]/div[1]/div[3]/div[1]/span[1]/input[1]");
     private By confirmBtn = By.xpath("/html[1]/body[1]/div[1]/div[9]/div[1]/form[1]/div[2]/button[1]");
 
+    // ============= trang gio hang ==============
+    private By minusBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/span[1]");
+    private By plusBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/span[2]");
+    private By numberInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/input[1]");
+    private By priceSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[5]/span[1]");
+
+    private By unitPriceSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[5]/span[1]");
+    private By textSpan= By.xpath("//span[contains(text(),'Vòng cổ mặt cười nhiều màu dễ thương')]");
+    private By totalCostSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[7]");
+
+    private By tickBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[1]/span[1]/label[1]/span[2]");
+    private By tickAllBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/span[1]/span[1]/label[1]/span[2]");
+
+    private By total = By.xpath("//span[contains(text(),'Tổng cộng:')]");
+
+
+
 
     public AccountPage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
         homePage = new HomePage(driver);
     }
+
+
 
     public void ViewFavoriteProduct(){
         homePage.goToFavoriteProductPage();
