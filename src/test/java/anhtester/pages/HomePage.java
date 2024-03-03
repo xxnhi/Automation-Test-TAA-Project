@@ -69,8 +69,9 @@ public class HomePage {
     private By phuKienTocLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/span[1]");
     private By tramCaiLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/ul[1]/li[4]/span[1]");
 
-    private By addCartBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/button[1]");
+    private By addCartBtn = By.xpath("//body/div[@id='main']/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/button[1]");
 
+    private By buyQuickBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[3]");
 
 //============ Trang tin tuc =======================
 
@@ -82,6 +83,14 @@ public class HomePage {
     public HomePage(WebDriver driver){
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void BuyQuickProduct(By productFrame){
+        WebElement viewQuickBtnElement = driver.findElement(productFrame);
+        Actions actions = new Actions(driver);
+        // Hover vào phần tử
+        actions.moveToElement(viewQuickBtnElement).perform();
+        validateHelper.clickElement(buyQuickBtn);
     }
 
     public void goToCartPage() throws InterruptedException {

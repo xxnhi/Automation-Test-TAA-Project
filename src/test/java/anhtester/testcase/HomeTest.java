@@ -55,10 +55,17 @@ public class HomeTest {
 
     @AfterClass
     public void tearDown() throws Exception {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.quit();
     }
-    @Test(priority = 2)
+
+    @Test (priority = 2)
+    public void BuyQuickProducts() throws Exception {
+        homePage.goToProductPage();
+        homePage.BuyQuickProduct(productFrameVcmcnmdt);
+    }
+
+    @Test(priority = 11)
     public void AddProductToCart() throws Exception {
         homePage.goToProductPage();
         homePage.ViewQuickDetail(productFrameVcmcnmdt,viewQuickVcmcnmdt);
