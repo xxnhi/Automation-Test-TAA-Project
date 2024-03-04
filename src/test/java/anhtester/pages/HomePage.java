@@ -113,13 +113,39 @@ public class HomePage {
     public void IncreaseOrDecreaseProductInCart() {
         String initTotalText = driver.findElement(totalCost).getText();
         Assert.assertEquals(initTotalText,"0");
+        clickTickBtn(tickBtn);
+        String afterTotalText = driver.findElement(totalCost).getText();
+        Assert.assertEquals(afterTotalText,"160000");
+        // khi click vao +
+        increaseProductInCart(plusBtn,"320000");
+
+        // khi click vao +
+        increaseProductInCart(plusBtn,"480000");
+        // khi click vao -
+        decreaseProductInCart(minusBtn,"320000");
+
+    }
+
+    public void clickTickBtn(By tickBtn){
         WebElement tickBtnElement = driver.findElement(tickBtn);
         wait.until(ExpectedConditions.visibilityOfElementLocated(tickBtn));
         if (tickBtnElement.isEnabled()) {
             tickBtnElement.click();
         }
-        String afterTotalText = driver.findElement(totalCost).getText();
-        Assert.assertEquals(afterTotalText,"160000");
+    }
+
+    public void increaseProductInCart(By plusBtn, String totalText){
+        // khi click vao -
+        validateHelper.clickElement(plusBtn);
+        String afterClickMinusElement1 = driver.findElement(totalCost).getText();
+        Assert.assertEquals(afterClickMinusElement1,totalText);
+    }
+
+    public void decreaseProductInCart(By minusBtn, String totalText){
+        // khi click vao -
+        validateHelper.clickElement(minusBtn);
+        String afterClickMinusElement1 = driver.findElement(totalCost).getText();
+        Assert.assertEquals(afterClickMinusElement1,totalText);
     }
 
     public void goToFavoriteProductPage(){
