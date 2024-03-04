@@ -8,14 +8,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.time.Duration;
 
 public class HomeTest {
     private WebDriver driver;
     private ValidateHelper validateHelper;
     private HomePage homePage;
+    private WebDriverWait wait;
 
 //    private By loginSubmitBtn = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/form[1]/button[1]/span[1]");
     private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
@@ -45,7 +49,7 @@ public class HomeTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         //==========quan trong============
         validateHelper = new ValidateHelper(driver);
         //==========quan trong============
@@ -57,6 +61,11 @@ public class HomeTest {
     public void tearDown() throws Exception {
         Thread.sleep(5000);
         driver.quit();
+    }
+
+    @Test (priority = 13)
+    public void IncreaseOrDecreaseProductInCart(){
+        homePage.IncreaseOrDecreaseProductInCart();
     }
 
     @Test (priority = 2)

@@ -10,7 +10,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.time.Instant;
+
+import static org.testng.Assert.assertTrue;
 
 public class HomePage {
     private WebDriver driver;
@@ -80,9 +83,43 @@ public class HomePage {
     private By article3Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[3]/div[1]/div[1]/a[1]");
 
 //=========== Trang ca nhan ========================
+
+
+
+    // ============= trang gio hang ==============
+    private By minusBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/span[1]");
+    private By plusBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/span[2]");
+    private By numberInput = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[6]/input[1]");
+    private By priceSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[5]/span[1]");
+
+    private By unitPriceSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[5]/span[1]");
+    private By textSpan= By.xpath("//span[contains(text(),'Vòng cổ mặt cười nhiều màu dễ thương')]");
+    private By totalCostSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[7]");
+
+    private By tickBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[1]/span[1]/label[1]/span[1]");
+
+    private By tickAllBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/span[1]/span[1]/label[1]/span[2]");
+
+    private By totalTittle = By.xpath("//span[contains(text(),'Tổng cộng:')]");
+
+    private By totalCost = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/aside[1]/div[1]/div[4]/span[2]");
+
     public HomePage(WebDriver driver){
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void IncreaseOrDecreaseProductInCart() {
+        String initTotalText = driver.findElement(totalCost).getText();
+        Assert.assertEquals(initTotalText,"0");
+        WebElement tickBtnElement = driver.findElement(tickBtn);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(tickBtn));
+        if (tickBtnElement.isEnabled()) {
+            tickBtnElement.click();
+        }
+        String afterTotalText = driver.findElement(totalCost).getText();
+        Assert.assertEquals(afterTotalText,"160000");
     }
 
     public void goToFavoriteProductPage(){
@@ -229,7 +266,7 @@ public class HomePage {
 
     public void Register(String fullname, String phone, String email, String pass, String repass, String alertNoti){
         validateHelper.waitForPageLoaded();
-        Assert.assertTrue(validateHelper.verifyElementText(textReg,"Đăng ký"),"Không phải popup Đăng ký");
+        assertTrue(validateHelper.verifyElementText(textReg,"Đăng ký"),"Không phải popup Đăng ký");
         validateHelper.setText(regFullNameInput, fullname);
         validateHelper.setText(regPhoneInput, phone);
         validateHelper.setText(regEmailInput, email);
@@ -247,7 +284,7 @@ public class HomePage {
 
     public void SignIn (String phone, String password, String alertNoti) throws InterruptedException {
         validateHelper.waitForPageLoaded();
-        Assert.assertTrue(validateHelper.verifyElementText(loginSubmitBtn,"Đăng nhập"),"Không phải popup Đăng nhập");
+        assertTrue(validateHelper.verifyElementText(loginSubmitBtn,"Đăng nhập"),"Không phải popup Đăng nhập");
         validateHelper.setText(phoneInput, phone);
         validateHelper.setText(passwordInput, password);
         validateHelper.clickElement(loginSubmitBtn);

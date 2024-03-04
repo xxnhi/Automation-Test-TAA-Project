@@ -10,6 +10,7 @@
                 <methods>
                     <include name="SignInTAA" />
                     <include name="ViewCartPage" />
+                    <include name="IncreaseOrDecreaseProductInCart" />
                 </methods>
             </class>
         </classes>

@@ -3,6 +3,8 @@ package anhtester.pages;
 import anhtester.common.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AccountPage {
@@ -31,6 +33,7 @@ public class AccountPage {
     private By totalCostSpan = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[7]");
 
     private By tickBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[1]/span[1]/label[1]/span[2]");
+
     private By tickAllBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/span[1]/span[1]/label[1]/span[2]");
 
     private By total = By.xpath("//span[contains(text(),'Tổng cộng:')]");
@@ -43,6 +46,8 @@ public class AccountPage {
         validateHelper = new ValidateHelper(driver);
         homePage = new HomePage(driver);
     }
+
+
 
 
 
