@@ -106,7 +106,6 @@ public class HomePage {
     private By totalCost = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/aside[1]/div[1]/div[4]/span[2]");
 
     private By deleteProduct1Btn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[8]/button[1]");
-    private By deleteProduct2Btn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[2]/span[8]/button[1]");
 
     private By acceptDeleteBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/button[2]");
 
@@ -126,7 +125,7 @@ public class HomePage {
         validateHelper.isAlertTitleMatching(alertnoti);
         Assert.assertEquals(driver.findElement(totalCost).getText(),"150000");
         // khi click vao btn xoa thu hai
-        validateHelper.clickElement(deleteProduct2Btn);
+        validateHelper.clickElement(deleteProduct1Btn);
         validateHelper.clickElement(acceptDeleteBtn);
         Thread.sleep(3000);
         validateHelper.isAlertTitleMatching(alertnoti);
