@@ -38,7 +38,21 @@ public class AccountPage {
 
     private By total = By.xpath("//span[contains(text(),'Tổng cộng:')]");
 
+    // ========= danh gia san pham
 
+    private By successText = By.xpath("/html[1]/body[1]/div[1]/div[10]/div[1]/p[1]");
+
+    private By fifthStarProductQuality = By.xpath("/html[1]/body[1]/div[1]/div[11]/div[1]/div[3]/div[1]/span[5]");
+
+    private By fifthStarShippingService = By.xpath("/html[1]/body[1]/div[1]/div[11]/div[1]/div[4]/div[1]/span[5]");
+
+    private By reviewInput = By.xpath("/html[1]/body[1]/div[1]/div[11]/div[1]/div[5]/div[1]/textarea[1]");
+
+    private By doneBtn = By.xpath("/html[1]/body[1]/div[1]/div[11]/div[1]/div[7]/button[2]");
+
+    private By reviewBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[4]/div[1]/div[1]/button[1]");
+
+    private By scrollBeforeReviewBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[3]/div[1]/div[1]/p[1]");
 
 
     public AccountPage(WebDriver driver){
@@ -47,8 +61,19 @@ public class AccountPage {
         homePage = new HomePage(driver);
     }
 
+    public void ProductReview() {
+        goToReviewPopup();
+        // test data 1
 
 
+
+    }
+
+    public void goToReviewPopup(){
+        homePage.goToOrderPage();
+        validateHelper.scrollToElement(scrollBeforeReviewBtn);
+        validateHelper.clickElement(reviewBtn);
+    }
 
 
     public void ViewFavoriteProduct(){
