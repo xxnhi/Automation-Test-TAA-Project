@@ -9,8 +9,10 @@
             <class name="anhtester.testcase.HomeTest">
                 <methods>
                     <include name="SignInTAA" />
+<!--                    <include name="AddProductToCart" />-->
                     <include name="ViewCartPage" />
                     <include name="IncreaseOrDecreaseProductInCart" />
+                    <include name="DeleteProductInCart"/>
                 </methods>
             </class>
         </classes>

@@ -76,6 +76,7 @@ public class HomePage {
 
     private By buyQuickBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[3]");
 
+
 //============ Trang tin tuc =======================
 
     private By article1Text = By.xpath("/html[1]/body[1]/div[1]/main[1]/section[2]/div[1]/div[1]/article[1]/div[1]/div[1]/a[1]");
@@ -98,16 +99,38 @@ public class HomePage {
 
     private By tickBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[1]/span[1]/label[1]/span[1]");
 
-    private By tickAllBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/span[1]/span[1]/label[1]/span[2]");
+    private By tickAllBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[1]/span[1]/span[1]/label[1]/span[3]");
 
     private By totalTittle = By.xpath("//span[contains(text(),'Tổng cộng:')]");
 
     private By totalCost = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/aside[1]/div[1]/div[4]/span[2]");
 
+    private By deleteProduct1Btn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[1]/span[8]/button[1]");
+    private By deleteProduct2Btn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/section[2]/div[2]/span[8]/button[1]");
+
+    private By acceptDeleteBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/button[2]");
+
     public HomePage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         validateHelper = new ValidateHelper(driver);
+    }
+
+    public void DeleteProductInCart(String alertnoti) throws InterruptedException {
+        clickTickBtn(tickAllBtn);
+        Assert.assertEquals(driver.findElement(totalCost).getText(),"310000");
+        // khi click vao btn xoa thu nhat
+        validateHelper.clickElement(deleteProduct1Btn);
+        validateHelper.clickElement(acceptDeleteBtn);
+        Thread.sleep(3000);
+        validateHelper.isAlertTitleMatching(alertnoti);
+        Assert.assertEquals(driver.findElement(totalCost).getText(),"150000");
+        // khi click vao btn xoa thu hai
+        validateHelper.clickElement(deleteProduct2Btn);
+        validateHelper.clickElement(acceptDeleteBtn);
+        Thread.sleep(3000);
+        validateHelper.isAlertTitleMatching(alertnoti);
+        Assert.assertEquals(driver.findElement(totalCost).getText(),"0");
     }
 
     public void IncreaseOrDecreaseProductInCart() {
@@ -123,7 +146,8 @@ public class HomePage {
         increaseProductInCart(plusBtn,"480000");
         // khi click vao -
         decreaseProductInCart(minusBtn,"320000");
-
+        // khi click vao -
+        decreaseProductInCart(minusBtn,"160000");
     }
 
     public void clickTickBtn(By tickBtn){
@@ -175,11 +199,10 @@ public class HomePage {
         validateHelper.clickElement(cartBtn);
     }
 
-    public void AddProductToCart() throws InterruptedException {
+    public void AddProductToCart(By addCartBtn, By viewQuickQuitBtn ) throws InterruptedException {
         validateHelper.clickElement(addCartBtn);
-        Thread.sleep(5000);
-        System.out.println("da nhan duoc nut them vao gio hang");
-
+//        Thread.sleep(5000);
+        validateHelper.clickElement(viewQuickQuitBtn);
     }
 
     public void goToOrderPage(){
@@ -226,6 +249,8 @@ public class HomePage {
     public void goToArticlePage(){
         validateHelper.clickElement(articleMenu);
     }
+
+
 
     public void ViewQuickDetail(By productFrame,  By viewQuickBtn){
         WebElement viewQuickBtnElement = driver.findElement(productFrame);

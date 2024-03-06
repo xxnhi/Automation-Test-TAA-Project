@@ -140,6 +140,11 @@ public class ValidateHelper {
         return false;
     }
 
+    public void acceptAlert() {
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
     public boolean isAlertPresent(){
         try{
             driver.switchTo().alert();
