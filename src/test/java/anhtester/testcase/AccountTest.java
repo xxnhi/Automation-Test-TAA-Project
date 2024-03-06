@@ -53,8 +53,12 @@ public class AccountTest {
         // data 5
         homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
     }
-
     @Test (priority = 2)
+    public void ProductReview() throws Exception {
+        accountPage.ProductReview();
+    }
+
+    @Test (priority = 5)
     public void ViewFavoriteProduct(){
         accountPage.ViewFavoriteProduct();
     }

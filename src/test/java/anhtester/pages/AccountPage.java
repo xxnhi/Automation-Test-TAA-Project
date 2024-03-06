@@ -64,6 +64,18 @@ public class AccountPage {
     public void ProductReview() {
         goToReviewPopup();
         // test data 1
+        validateHelper.clickElement(fifthStarProductQuality);
+        validateHelper.clickElement(doneBtn);
+        validateHelper.isAlertTitleMatching("Vui lòng nhập đánh giá sản phẩm.");
+        // test data 2
+        validateHelper.clickElement(fifthStarShippingService);
+        validateHelper.clickElement(doneBtn);
+        validateHelper.isAlertTitleMatching("Vui lòng nhập đánh giá sản phẩm.");
+        // test data 3
+        validateHelper.setText(reviewInput,"Sản phẩm như mong đợi");
+        validateHelper.clickElement(doneBtn);
+        validateHelper.verifyElementText(successText,"Bạn đã thực hiện thành công!");
+
 
 
 
