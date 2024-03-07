@@ -80,10 +80,15 @@ public class HomeTest {
     }
 
 
-//    @AfterClass
+    @AfterClass
     public void tearDown() throws Exception {
         Thread.sleep(5000);
         driver.quit();
+    }
+
+    @Test (priority = 15)
+    public void OrderProduct() throws Exception {
+        homePage.OrderProduct();
     }
     @Test (priority = 14)
     public void DeleteProductInCart() throws Exception {
