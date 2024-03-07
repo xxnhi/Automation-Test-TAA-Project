@@ -109,12 +109,26 @@ public class HomePage {
 
     private By acceptDeleteBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/button[2]");
 
+    private By proceedOrder = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/aside[1]/div[1]/div[7]/button[1]/span[1]/html[1]/body[1]/div[1]/div[2]/div[1]/aside[1]/div[1]/div[7]/button[1]/span[1]");
+
+    private By ShipMethod48hRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[2]/div[1]/label[1]");
+    private By ShipMethod2hRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[2]/div[2]/label[1]");
+    private By PaymentMethodCODRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[3]/div[1]/label[1]");
+
+    private By PaymentMethodOnlRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[3]/div[2]/label[1]");
+
+
     public HomePage(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         validateHelper = new ValidateHelper(driver);
     }
 
+    public void OrderProduct(){
+        WebElement proceedProductElement = driver.findElement(proceedOrder);
+        Assert.assertFalse(proceedProductElement.isEnabled(), "Nut tien hanh dat hang bi loi");
+
+    }
     public void DeleteProductInCart(String alertnoti) throws InterruptedException {
         clickTickBtn(tickAllBtn);
         Assert.assertEquals(driver.findElement(totalCost).getText(),"310000");

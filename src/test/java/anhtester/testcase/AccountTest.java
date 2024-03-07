@@ -16,6 +16,8 @@ public class AccountTest {
     private ValidateHelper validateHelper;
     private AccountPage accountPage;
     private HomePage homePage;
+
+    private HomeTest homeTest;
     @BeforeClass
     public void setupBrowser() {
         WebDriverManager.chromedriver().setup();
@@ -53,7 +55,9 @@ public class AccountTest {
         // data 5
         homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
     }
-    @Test (priority = 2)
+
+
+    @Test (priority = 6)
     public void ProductReview() throws Exception {
         accountPage.ProductReview();
     }

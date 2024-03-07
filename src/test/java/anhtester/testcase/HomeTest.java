@@ -80,7 +80,7 @@ public class HomeTest {
     }
 
 
-    @AfterClass
+//    @AfterClass
     public void tearDown() throws Exception {
         Thread.sleep(5000);
         driver.quit();

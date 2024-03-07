@@ -104,6 +104,16 @@ public class ValidateHelper {
         return select.getOptions().indexOf(selectedOption)== index;
     }
 
+    public boolean isRadioBtnSelected(By radioBtn){
+        WebElement radioButton = driver.findElement(radioBtn);
+        return radioButton.isSelected();
+    }
+
+    public boolean isRadioBtnEnabled(By radioBtn){
+        WebElement radioButton = driver.findElement(radioBtn);
+        return radioButton.isEnabled();
+    }
+
     public boolean verifyURL(String url){
         System.out.println(driver.getCurrentUrl());
         System.out.println(url);
