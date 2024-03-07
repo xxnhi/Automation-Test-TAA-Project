@@ -1,5 +1,6 @@
 package anhtester.base;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import anhtester.common.ValidateHelper;
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -18,6 +20,7 @@ public class BaseSetup {
 
     static String driverPath = "resources\\drivers\\";
     private ValidateHelper validateHelper;
+    private WebDriverWait wait;
 
     public WebDriver getDriver() {
         return driver;
@@ -90,8 +93,14 @@ public class BaseSetup {
 
     @BeforeClass
     public void setupBrowser() {
-        driver = new BaseSetup().setupDriver("chrome");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        //==========quan trong============
         validateHelper = new ValidateHelper(driver);
+        //==========quan trong============
+//        homePage = new HomePage(driver);
     }
 
 

@@ -1,9 +1,7 @@
 package anhtester.testcase;
 
-import anhtester.base.BaseSetup;
 import anhtester.common.ValidateHelper;
 import anhtester.pages.HomePage;
-import anhtester.pages.SignInPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -76,7 +74,7 @@ public class HomeTest {
         //==========quan trong============
         validateHelper = new ValidateHelper(driver);
         //==========quan trong============
-        homePage = new HomePage(driver);
+//        homePage = new HomePage(driver);
     }
 
 
