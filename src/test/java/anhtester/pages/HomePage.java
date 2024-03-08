@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -67,11 +68,13 @@ public class HomePage {
 
     private By trangSucLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/span[1]");
     private By vongTayLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[2]/span[1]");
+    private By vongTayFilterVerifyText = By.xpath("//a[contains(text(),'Vòng tay thời tiết - mây và cầu vồng')]");
     private By nhanLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[4]/span[1]");
-
+    private By nhanFilterVerifyText = By.xpath("//a[contains(text(),'Nhẫn cặp dễ thương dành cho cặp đôi')]");
     private By phuKienTocLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/span[1]");
     private By tramCaiLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/ul[1]/li[4]/span[1]");
 
+    private By tramCaiFilterVerifyText = By.xpath("//a[contains(text(),'Bộ 2 trâm cài nhật nguyệt')]");
     private By addCartBtn = By.xpath("//body/div[@id='main']/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/button[1]");
 
     private By buyQuickBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[3]");
@@ -259,12 +262,16 @@ public class HomePage {
         // loc sp "Vong tay"
         validateHelper.clickElement(trangSucLeftMenu);
         validateHelper.clickElement(vongTayLeftMenu);
+        validateHelper.verifyElementText(vongTayFilterVerifyText,"Vòng tay thời tiết - mây và cầu vồng");
         //loc sp "Nhan"
         validateHelper.clickElement(nhanLeftMenu);
+        validateHelper.verifyElementText(nhanFilterVerifyText,"Nhẫn cặp dễ thương dành cho cặp đôi");
         //loc sp "Tram cai
         validateHelper.clickElement(phuKienTocLeftMenu);
         validateHelper.clickElement(tramCaiLeftMenu);
+        validateHelper.verifyElementText(tramCaiFilterVerifyText,"Bộ 2 trâm cài nhật nguyệt");
     }
+
 
     public void goToArticlePage(){
         validateHelper.clickElement(articleMenu);
@@ -335,7 +342,7 @@ public class HomePage {
         validateHelper.clickElement(regBtn);
     }
 
-    public void Register(String fullname, String phone, String email, String pass, String repass, String alertNoti){
+    public void Register(String fullname, String phone, String email, String pass, String repass, String alertNoti) throws InterruptedException {
         validateHelper.waitForPageLoaded();
         assertTrue(validateHelper.verifyElementText(textReg,"Đăng ký"),"Không phải popup Đăng ký");
         validateHelper.setText(regFullNameInput, fullname);
@@ -345,6 +352,7 @@ public class HomePage {
         validateHelper.setText(regRepasswordInput, repass);
         validateHelper.clickElement(checkLabel);
         validateHelper.clickElement(regSubmitBtn);
+        Thread.sleep(2000);
         validateHelper.isAlertTitleMatching(alertNoti);
     }
 

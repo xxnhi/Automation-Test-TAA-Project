@@ -76,9 +76,6 @@ public class AccountPage {
         validateHelper.clickElement(doneBtn);
         validateHelper.verifyElementText(successText,"Bạn đã thực hiện thành công!");
 
-
-
-
     }
 
     public void goToReviewPopup(){

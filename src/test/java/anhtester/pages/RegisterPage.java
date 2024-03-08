@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class RegisterPage {
+public class RegisterPage  {
     private WebDriver driver;
     private ValidateHelper validateHelper;
     private WebDriverWait wait;
@@ -19,7 +19,7 @@ public class RegisterPage {
         homePage = new HomePage(driver);
     }
 
-    public void RegisterFailWithNamePhoneEmailPassRepassNull() {
+    public void RegisterFailWithNamePhoneEmailPassRepassNull() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -27,7 +27,7 @@ public class RegisterPage {
         homePage.Register("","","","","","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithFullNameNull() {
+    public void RegisterFailWithFullNameNull() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -35,7 +35,7 @@ public class RegisterPage {
         homePage.Register("","0933863327","xuannhi@gmail.com","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithPhoneNull() {
+    public void RegisterFailWithPhoneNull() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -43,7 +43,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","","xuannhi@gmail.com","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithEmailNull() {
+    public void RegisterFailWithEmailNull() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -51,7 +51,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","","Abcd@123","Abcd@123","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithPassNull() {
+    public void RegisterFailWithPassNull() throws InterruptedException{
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -59,7 +59,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","","Abcd@123","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithRepassNull() {
+    public void RegisterFailWithRepassNull() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -67,7 +67,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","Abcd@123","","Vui lòng nhập tất cả các trường");
     }
 
-    public void RegisterFailWithInvalidEmail() {
+    public void RegisterFailWithInvalidEmail() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -75,7 +75,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","xuannhi","Abcd@123","Abcd@123","Email không hợp lệ");
     }
 
-    public void RegisterFailWithInvalidPhone() {
+    public void RegisterFailWithInvalidPhone() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -83,7 +83,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0","xuannhi@gmail.com","Abcd@123","Abcd@123","Số điện thoại không hợp lệ");
     }
 
-    public void RegisterFailWithInvalidPass() {
+    public void RegisterFailWithInvalidPass() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -91,7 +91,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","123","123","Mật khẩu phải có ít nhất 8 ký tự, bao gồm cả chữ và số, không có dấu cách và ký tự đặc biệt");
     }
 
-    public void RegisterFailWithPassDifferRepass1() {
+    public void RegisterFailWithPassDifferRepass1() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -100,7 +100,7 @@ public class RegisterPage {
 
     }
 
-    public void RegisterFailWithPassDifferRepass2() {
+    public void RegisterFailWithPassDifferRepass2() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
@@ -108,7 +108,7 @@ public class RegisterPage {
         homePage.Register("Xuan Nhi","0933863327","xuannhi@gmail.com","Abcd@123","Abcd@12345","Mật khẩu và Xác nhận mật khẩu phải giống nhau");
     }
 
-    public void RegisterSuccess() {
+    public void RegisterSuccess() throws InterruptedException {
         driver.get("http://127.0.0.1:3000/");
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();

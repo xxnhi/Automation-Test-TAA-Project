@@ -74,7 +74,7 @@ public class HomeTest {
         //==========quan trong============
         validateHelper = new ValidateHelper(driver);
         //==========quan trong============
-//        homePage = new HomePage(driver);
+        homePage = new HomePage(driver);
     }
 
 
