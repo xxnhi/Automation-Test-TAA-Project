@@ -15,9 +15,12 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
+import static anhtester.common.CaptureHelpers.captureScreenshot;
+
 public class RegisterTest {
 
     private RegisterPage registerPage;
+//    private CaptureHelpers captureHelpers;
     private WebDriver driver;
 
     @BeforeClass
@@ -33,6 +36,11 @@ public class RegisterTest {
     public void tearDown() throws Exception {
         Thread.sleep(2000);
         driver.quit();
+    }
+
+    @AfterMethod
+    public void captureImg(){
+        captureScreenshot(driver,"register");
     }
     public void RegisterFailWithNamePhoneEmailPassRepassNull() throws InterruptedException{
         registerPage.RegisterFailWithNamePhoneEmailPassRepassNull();
@@ -96,7 +104,6 @@ public class RegisterTest {
 
 //    @AfterMethod
 //    public void takeScreenshot(@org.jetbrains.annotations.NotNull ITestResult result) throws InterruptedException {
-//        Thread.sleep(1000);
 //        //Khởi tạo đối tượng result thuộc ITestResult để lấy trạng thái và tên của từng Test Case
 //        //Ở đây sẽ so sánh điều kiện nếu testcase passed hoặc failed
 //        //passed = SUCCESS và failed = FAILURE

@@ -21,7 +21,7 @@ public class CaptureHelpers {
         PropertiesFile.setPropertiesFile();
         try {
             Reporter.log("Driver for Screenshot: " + driver);
-            // Tạo tham chiếu đối tượng của TakesScreenshot với dirver hiện tại
+            // Tạo tham chiếu đối tượng của TakesScreenshot với driver hiện tại
             TakesScreenshot ts = (TakesScreenshot) driver;
             // Gọi hàm getScreenshotAs để chuyển hóa hình ảnh về dạng FILE
             File source = ts.getScreenshotAs(OutputType.FILE);
