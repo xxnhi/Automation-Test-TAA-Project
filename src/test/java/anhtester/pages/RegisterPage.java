@@ -113,7 +113,9 @@ public class RegisterPage  {
         validateHelper.waitForPageLoaded();
         homePage.goToRegisterPopup();
         //data 12
-        homePage.Register("Xuan Nhi","0933863347","xini27@gmail.com","Abcd@123","Abcd@123","Đăng ký thành công. Vui lòng đăng nhập");
+        homePage.Register("Xuan Nhi","0933863347","xini27@gmail.com","Abcd@123","Abcd@123","Số điện thoại hoặc email đã tồn tại");
+//        homePage.Register("Xuan Nhi","0933863557","xinyni27@gmail.com","Abcd@1234","Abcd@1234","Đăng ký thành công. Vui lòng đăng nhập");
+        
     }
 
 

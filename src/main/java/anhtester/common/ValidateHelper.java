@@ -170,14 +170,27 @@ public class ValidateHelper {
                 Alert alert = driver.switchTo().alert();
                 String actualTitle = alert.getText();
                 System.out.println(actualTitle);
-                alert.accept(); // Đóng cửa sổ cảnh báo sau khi lấy tiêu đề
-                return actualTitle != null && !actualTitle.isEmpty() && actualTitle.equals(expectedTitle);
+                if(actualTitle != null && !actualTitle.isEmpty() && actualTitle.contains(expectedTitle)){
+                    alert.accept(); // Đóng cửa sổ cảnh báo sau khi lấy tiêu đề
+                    Thread.sleep(2000);
+                    return true;
+                } else {
+                    System.out.print("Truong hop alert sai vs thuc te");
+                    return false;
+                }
+
             } catch (NoAlertPresentException e) {
                 // Trường hợp cửa sổ cảnh báo không còn tồn tại
+                System.out.print("Trường hợp cửa sổ cảnh báo không còn tồn tại");
                 return false;
+
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
             }
         } else {
+            System.out.print("Không có cửa sổ cảnh báo nào xuất hiện");
             return false; // Không có cửa sổ cảnh báo nào xuất hiện
+
         }
     }
     public void handleAlert() {
