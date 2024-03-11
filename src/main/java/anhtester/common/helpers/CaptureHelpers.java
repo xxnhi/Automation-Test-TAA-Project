@@ -1,5 +1,6 @@
-package anhtester.common;
+package anhtester.common.helpers;
 
+import anhtester.common.ultilities.PropertiesFile;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;

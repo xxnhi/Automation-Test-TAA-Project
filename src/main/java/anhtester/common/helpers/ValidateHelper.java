@@ -1,4 +1,4 @@
-package anhtester.common;
+package anhtester.common.helpers;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;

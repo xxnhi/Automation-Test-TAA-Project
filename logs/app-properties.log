@@ -1,0 +1,5 @@
+[INFO ] 11-03-2024 21:38:47 [main] Log - Chạy test case: LoginFailWithPhoneAndPasswordNull
+[INFO ] 11-03-2024 21:38:56 [main] Log - Chạy test case: LoginFailWithPhoneNull
+[INFO ] 11-03-2024 21:39:05 [main] Log - Chạy test case: LoginFailWithFailPhone
+[INFO ] 11-03-2024 21:39:14 [main] Log - Chạy test case: LoginFailWithIncorrectPassword
+[INFO ] 11-03-2024 21:39:21 [main] Log - Chạy test case: LoginSuccess

@@ -1,4 +1,4 @@
-package anhtester.common;
+package anhtester.common.ultilities;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

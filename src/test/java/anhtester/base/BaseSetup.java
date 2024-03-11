@@ -4,8 +4,8 @@ import java.io.File;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import anhtester.common.CaptureHelpers;
-import anhtester.common.ValidateHelper;
+import anhtester.common.helpers.CaptureHelpers;
+import anhtester.common.helpers.ValidateHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,7 +19,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
 
 public class BaseSetup {
 

@@ -1,17 +1,13 @@
 package anhtester.testcase;
 
 import anhtester.base.TestListener;
-import anhtester.common.ValidateHelper;
-import anhtester.pages.AccountPage;
-import anhtester.pages.HomePage;
+import anhtester.common.ultilities.Log;
 import anhtester.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 @Listeners(TestListener.class)
 public class LoginTest {
@@ -27,12 +23,18 @@ public class LoginTest {
         loginPage = new LoginPage(driver);
     }
 
+    @AfterMethod
+    public void addLoginLogIn(ITestResult result) throws InterruptedException{
+        Log.info("Chạy test case: " +result.getName());
+    }
+
 
     @AfterClass
     public void tearDown() throws Exception {
         Thread.sleep(2000);
         driver.quit();
     }
+
     @Test(priority = 1)
     public void LoginFailWithPhoneAndPasswordNull() throws InterruptedException {
         loginPage.LoginFailWithPhoneAndPasswordNull();

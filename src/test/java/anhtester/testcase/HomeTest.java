@@ -1,6 +1,6 @@
 package anhtester.testcase;
 
-import anhtester.common.ValidateHelper;
+import anhtester.common.helpers.ValidateHelper;
 import anhtester.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

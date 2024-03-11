@@ -1,6 +1,6 @@
 package anhtester.base;
 
-import anhtester.common.CaptureHelpers;
+import anhtester.common.helpers.CaptureHelpers;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;

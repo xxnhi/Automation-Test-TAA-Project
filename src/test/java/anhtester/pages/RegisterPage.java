@@ -1,6 +1,6 @@
 package anhtester.pages;
 
-import anhtester.common.ValidateHelper;
+import anhtester.common.helpers.ValidateHelper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 

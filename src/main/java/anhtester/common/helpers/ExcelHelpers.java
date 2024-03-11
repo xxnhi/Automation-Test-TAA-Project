@@ -1,4 +1,4 @@
-package anhtester.common;
+package anhtester.common.helpers;
 
 import java.awt.Color;
 import java.io.File;

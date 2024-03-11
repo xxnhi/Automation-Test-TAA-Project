@@ -1,10 +1,9 @@
 package anhtester.testcase;
 
-import anhtester.common.ValidateHelper;
+import anhtester.common.helpers.ValidateHelper;
 import anhtester.pages.AccountPage;
 import anhtester.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
