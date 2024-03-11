@@ -1,5 +1,6 @@
 package anhtester.testcase;
 
+import anhtester.base.TestListener;
 import anhtester.common.helpers.ValidateHelper;
 import anhtester.pages.HomePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -9,9 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+@Listeners(TestListener.class)
 
 public class HomeTest {
     private WebDriver driver;
@@ -137,7 +140,6 @@ public class HomeTest {
         driver.get("http://127.0.0.1:3000/");
         homePage.goToProductPage();
         homePage.FilterProduct();
-
     }
     @Test (priority = 8)
     public void ViewArticle() throws Exception {

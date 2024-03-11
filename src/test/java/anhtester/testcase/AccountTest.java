@@ -1,5 +1,6 @@
 package anhtester.testcase;
 
+import anhtester.base.TestListener;
 import anhtester.common.helpers.ValidateHelper;
 import anhtester.pages.AccountPage;
 import anhtester.pages.HomePage;
@@ -8,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+@Listeners(TestListener.class)
 
 public class AccountTest {
     private WebDriver driver;

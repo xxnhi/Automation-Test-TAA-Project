@@ -60,6 +60,7 @@ public class AccountPage {
     }
 
     public void ProductReview() {
+        homePage.goToOrderPage();
         goToReviewPopup();
         // test data 1
         validateHelper.clickElement(fifthStarProductQuality);

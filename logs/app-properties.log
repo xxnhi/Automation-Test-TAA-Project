@@ -5,3 +5,23 @@
 [INFO ] 11-03-2024 21:51:52 [main] Log - Đây là test case chạy thành công: LoginFailWithIncorrectPassword
 [INFO ] 11-03-2024 21:51:59 [main] Log - Đây là test case chạy thành công: LoginSuccess
 [INFO ] 11-03-2024 21:52:03 [main] Log - Kết thúc auto test
+[INFO ] 11-03-2024 22:00:17 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 11-03-2024 22:00:33 [main] Log - Đây là test case chạy thành công: RegisterFailWithFullNameNull
+[INFO ] 11-03-2024 22:00:41 [main] Log - Đây là test case chạy thành công: RegisterFailWithPhoneNull
+[INFO ] 11-03-2024 22:00:49 [main] Log - Đây là test case chạy thành công: RegisterFailWithEmailNull
+[INFO ] 11-03-2024 22:00:55 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassNull
+[INFO ] 11-03-2024 22:01:02 [main] Log - Đây là test case chạy thành công: RegisterFailWithRepassNull
+[INFO ] 11-03-2024 22:01:11 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidEmail
+[INFO ] 11-03-2024 22:01:20 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidPhone
+[INFO ] 11-03-2024 22:01:29 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidPass
+[INFO ] 11-03-2024 22:01:38 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassDifferRepass1
+[INFO ] 11-03-2024 22:01:46 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassDifferRepass2
+[INFO ] 11-03-2024 22:01:54 [main] Log - Đây là test case chạy thành công: RegisterSuccess
+[INFO ] 11-03-2024 22:01:59 [main] Log - Kết thúc auto test
+[INFO ] 11-03-2024 22:10:34 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 11-03-2024 22:10:53 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 11-03-2024 22:10:59 [main] Log - Đây là test case chạy thành công: ViewOrderHistory
+[INFO ] 11-03-2024 22:11:04 [main] Log - Đây là test case chạy thành công: ChangePassword
+[ERROR] 11-03-2024 22:11:10 [main] Log - Đây là test case bị fail: ViewFavoriteProduct
+[ERROR] 11-03-2024 22:11:20 [main] Log - Đây là test case bị fail: ProductReview
+[INFO ] 11-03-2024 22:11:31 [main] Log - Kết thúc auto test
