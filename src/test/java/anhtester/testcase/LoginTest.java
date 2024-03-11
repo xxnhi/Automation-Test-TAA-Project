@@ -25,7 +25,7 @@ public class LoginTest {
 
     @AfterMethod
     public void addLoginLogIn(ITestResult result) throws InterruptedException{
-        Log.info("Chạy test case: " +result.getName());
+//        Log.info("Chạy test case: " +result.getName());
     }
 
 

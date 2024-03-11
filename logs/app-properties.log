@@ -1,5 +1,7 @@
-[INFO ] 11-03-2024 21:38:47 [main] Log - Chạy test case: LoginFailWithPhoneAndPasswordNull
-[INFO ] 11-03-2024 21:38:56 [main] Log - Chạy test case: LoginFailWithPhoneNull
-[INFO ] 11-03-2024 21:39:05 [main] Log - Chạy test case: LoginFailWithFailPhone
-[INFO ] 11-03-2024 21:39:14 [main] Log - Chạy test case: LoginFailWithIncorrectPassword
-[INFO ] 11-03-2024 21:39:21 [main] Log - Chạy test case: LoginSuccess
+[INFO ] 11-03-2024 21:51:10 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 11-03-2024 21:51:25 [main] Log - Đây là test case chạy thành công: LoginFailWithPhoneAndPasswordNull
+[INFO ] 11-03-2024 21:51:34 [main] Log - Đây là test case chạy thành công: LoginFailWithPhoneNull
+[INFO ] 11-03-2024 21:51:43 [main] Log - Đây là test case chạy thành công: LoginFailWithFailPhone
+[INFO ] 11-03-2024 21:51:52 [main] Log - Đây là test case chạy thành công: LoginFailWithIncorrectPassword
+[INFO ] 11-03-2024 21:51:59 [main] Log - Đây là test case chạy thành công: LoginSuccess
+[INFO ] 11-03-2024 21:52:03 [main] Log - Kết thúc auto test
