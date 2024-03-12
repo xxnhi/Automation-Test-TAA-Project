@@ -1,5 +1,6 @@
 package anhtester.pages;
 
+import anhtester.base.TestListener;
 import anhtester.common.helpers.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,11 +10,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 
 import java.time.Duration;
 
 import static org.testng.Assert.assertTrue;
-
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 public class HomePage {
     private WebDriver driver;
     private ValidateHelper validateHelper;
@@ -117,6 +120,7 @@ public class HomePage {
     private By PaymentMethodCODRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[3]/div[1]/label[1]");
 
     private By PaymentMethodOnlRadioBtn = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/main[1]/div[1]/section[3]/div[2]/label[1]");
+
 
 
     public HomePage(WebDriver driver){

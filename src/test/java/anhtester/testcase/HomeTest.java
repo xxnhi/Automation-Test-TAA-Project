@@ -8,10 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 @Listeners(TestListener.class)
@@ -85,6 +83,11 @@ public class HomeTest {
     public void tearDown() throws Exception {
         Thread.sleep(5000);
         driver.quit();
+    }
+
+    @AfterMethod
+    public void addLoginLogIn(ITestResult result) throws InterruptedException{
+//        Log.info("Chạy test case: " +result.getName());
     }
 
     @Test (priority = 15)
@@ -243,7 +246,7 @@ public class HomeTest {
     //data 4
 //        homePage.SignIn("0933863327","123456","Mật khẩu không chính xác");
     // data 5
-    homePage.SignIn("0933863327","Xuannhi03!", "Vui lòng điền vào trường này.");
+    homePage.SignIn("0933863327","Xuannhi03!", "Đăng nhập thành công");
 
     }
 }

@@ -103,3 +103,92 @@ org.openqa.selenium.StaleElementReferenceException: stale element reference: sta
 [ERROR] 12-03-2024 15:47:57 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
 [ERROR] 12-03-2024 15:47:57 [main] Log - Đây là test case bị fail: DeleteProductInCart
 [INFO ] 12-03-2024 15:48:02 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 21:36:48 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 12-03-2024 21:37:28 [main] Log - Đây là test case bị fail: LoginFailWithPhoneAndPasswordNull
+[ERROR] 12-03-2024 21:37:29 [main] Log - Đây là test case bị fail: LoginFailWithPhoneNull
+[ERROR] 12-03-2024 21:37:29 [main] Log - Đây là test case bị fail: LoginFailWithFailPhone
+[ERROR] 12-03-2024 21:37:29 [main] Log - Đây là test case bị fail: LoginFailWithIncorrectPassword
+[ERROR] 12-03-2024 21:37:29 [main] Log - Đây là test case bị fail: LoginSuccess
+[ERROR] 12-03-2024 21:37:38 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 12-03-2024 21:37:38 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 21:37:43 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 21:38:46 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 21:40:35 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 21:40:54 [main] Log - Đây là test case chạy thành công: LoginFailWithPhoneAndPasswordNull
+[ERROR] 12-03-2024 21:40:58 [main] Log - Đây là test case bị fail: LoginFailWithPhoneNull
+[INFO ] 12-03-2024 21:41:07 [main] Log - Đây là test case chạy thành công: LoginFailWithFailPhone
+[INFO ] 12-03-2024 21:41:16 [main] Log - Đây là test case chạy thành công: LoginFailWithIncorrectPassword
+[INFO ] 12-03-2024 21:41:22 [main] Log - Đây là test case chạy thành công: LoginSuccess
+[ERROR] 12-03-2024 21:41:32 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 12-03-2024 21:41:32 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 21:41:37 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 21:47:16 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 12-03-2024 21:47:25 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 12-03-2024 21:47:25 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 21:47:31 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 21:51:04 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 21:51:30 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 12-03-2024 21:51:31 [main] Log - Đây là test case bị fail: BuyQuickProducts
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: Register
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: ViewProduct
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: SearchProduct
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: ViewProductDetail
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: ViewArticleList
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: ViewArticle
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: FilterProduct
+[ERROR] 12-03-2024 21:51:42 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 21:52:33 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 21:52:50 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 12-03-2024 21:52:50 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 21:52:55 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:04:26 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 22:04:37 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 12-03-2024 22:04:37 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 22:04:42 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:08:10 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 22:08:25 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 12-03-2024 22:08:25 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 22:08:30 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:22:28 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 22:22:43 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 12-03-2024 22:22:44 [main] Log - Đây là test case chạy thành công: LogOut
+[INFO ] 12-03-2024 22:22:50 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:25:04 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 22:25:17 [main] Log - Đây là test case chạy thành công: RegisterFailWithNamePhoneEmailPassRepassNull
+[INFO ] 12-03-2024 22:25:24 [main] Log - Đây là test case chạy thành công: RegisterFailWithFullNameNull
+[INFO ] 12-03-2024 22:25:30 [main] Log - Đây là test case chạy thành công: RegisterFailWithPhoneNull
+[INFO ] 12-03-2024 22:25:36 [main] Log - Đây là test case chạy thành công: RegisterFailWithEmailNull
+[INFO ] 12-03-2024 22:25:43 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassNull
+[INFO ] 12-03-2024 22:25:49 [main] Log - Đây là test case chạy thành công: RegisterFailWithRepassNull
+[INFO ] 12-03-2024 22:25:56 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidEmail
+[INFO ] 12-03-2024 22:26:02 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidPhone
+[INFO ] 12-03-2024 22:26:09 [main] Log - Đây là test case chạy thành công: RegisterFailWithInvalidPass
+[INFO ] 12-03-2024 22:26:15 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassDifferRepass1
+[INFO ] 12-03-2024 22:26:21 [main] Log - Đây là test case chạy thành công: RegisterFailWithPassDifferRepass2
+[INFO ] 12-03-2024 22:26:27 [main] Log - Đây là test case chạy thành công: RegisterSuccess
+[ERROR] 12-03-2024 22:26:41 [main] Log - Đây là test case bị fail: LoginFailWithPhoneAndPasswordNull
+[ERROR] 12-03-2024 22:26:41 [main] Log - Đây là test case bị fail: LoginFailWithPhoneNull
+[ERROR] 12-03-2024 22:26:41 [main] Log - Đây là test case bị fail: LoginFailWithFailPhone
+[ERROR] 12-03-2024 22:26:41 [main] Log - Đây là test case bị fail: LoginFailWithIncorrectPassword
+[ERROR] 12-03-2024 22:26:41 [main] Log - Đây là test case bị fail: LoginSuccess
+[ERROR] 12-03-2024 22:26:48 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 12-03-2024 22:26:48 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 22:26:54 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:27:03 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 12-03-2024 22:27:38 [main] Log - Đây là test case bị fail: LoginFailWithPhoneAndPasswordNull
+[ERROR] 12-03-2024 22:27:38 [main] Log - Đây là test case bị fail: LoginFailWithPhoneNull
+[ERROR] 12-03-2024 22:27:38 [main] Log - Đây là test case bị fail: LoginFailWithFailPhone
+[ERROR] 12-03-2024 22:27:38 [main] Log - Đây là test case bị fail: LoginFailWithIncorrectPassword
+[ERROR] 12-03-2024 22:27:38 [main] Log - Đây là test case bị fail: LoginSuccess
+[ERROR] 12-03-2024 22:27:47 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 12-03-2024 22:27:47 [main] Log - Đây là test case bị fail: LogOut
+[INFO ] 12-03-2024 22:27:52 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 22:28:07 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 22:28:21 [main] Log - Đây là test case chạy thành công: LoginFailWithPhoneAndPasswordNull
+[INFO ] 12-03-2024 22:28:30 [main] Log - Đây là test case chạy thành công: LoginFailWithPhoneNull
+[INFO ] 12-03-2024 22:28:38 [main] Log - Đây là test case chạy thành công: LoginFailWithFailPhone
+[INFO ] 12-03-2024 22:28:47 [main] Log - Đây là test case chạy thành công: LoginFailWithIncorrectPassword
+[INFO ] 12-03-2024 22:28:54 [main] Log - Đây là test case chạy thành công: LoginSuccess
+[INFO ] 12-03-2024 22:29:07 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 12-03-2024 22:29:08 [main] Log - Đây là test case chạy thành công: LogOut
+[INFO ] 12-03-2024 22:29:13 [main] Log - Kết thúc auto test
