@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test example">
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL"
+               value="" />
+<!--    Test Suite 1: Quản lý tài khoản người dùng-->
+    <test name="test">
+        <classes>
+            <class name="anhtester.testcase.RegisterTest"></class>
+            <class name="anhtester.testcase.LoginTest"></class>
+            <class name="anhtester.testcase.HomeTest">
+                <methods>
+                    <include name="SignInTAA" />
+                    <include name="LogOut" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

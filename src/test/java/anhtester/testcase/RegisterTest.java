@@ -35,9 +35,10 @@ public class RegisterTest {
 //    public void captureImg(){
 //        captureScreenshot(driver,"register");
 //    }
-//    public void RegisterFailWithNamePhoneEmailPassRepassNull() throws InterruptedException{
-//        registerPage.RegisterFailWithNamePhoneEmailPassRepassNull();
-//    }
+    @Test(priority = 1)
+    public void RegisterFailWithNamePhoneEmailPassRepassNull() throws InterruptedException{
+        registerPage.RegisterFailWithNamePhoneEmailPassRepassNull();
+    }
 
     @Test(priority = 2)
     public void RegisterFailWithFullNameNull() throws InterruptedException{

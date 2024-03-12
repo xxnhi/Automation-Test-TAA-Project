@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test example">
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL"
+               value="" />
+    <!--   Test Suite 2: Tìm kiếm và xem thông tin-->
+    <test name="test">
+        <classes>
+<!--            <class name="anhtester.testcase.RegisterTest"></class>-->
+<!--            <class name="anhtester.testcase.LoginTest"></class>-->
+            <class name="anhtester.testcase.HomeTest">
+                <methods>
+                    <include name="ViewProduct" />
+                    <include name="FilterProduct" />
+                    <include name="SearchProduct" />
+                    <include name="ViewProductDetail" />
+                    <include name="ViewArticleList" />
+                    <include name="ViewArticle" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
