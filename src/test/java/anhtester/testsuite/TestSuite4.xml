@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test example">
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL"
+               value="" />
+    <!--   Test Suite 4: Quản lý giỏ hàng -->
+    <test name="test">
+        <classes>
+
+            <class name="anhtester.testcase.HomeTest">
+                <methods>
+                    <include name="signInTAA" />
+                    <include name="AddProductToCart" />
+                    <include name="IncreaseOrDecreaseProductInCart" />
+                    <include name="DeleteProductInCart" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

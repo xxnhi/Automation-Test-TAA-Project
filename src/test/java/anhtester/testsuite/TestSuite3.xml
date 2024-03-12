@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test example">
+    <parameter name="browserType" value="chrome" />
+    <parameter name="appURL"
+               value="" />
+    <!--   Test Suite 3: Quản lý mua sắm -->
+    <test name="test">
+        <classes>
+            <class name="anhtester.testcase.AccountTest">
+                <methods>
+                    <include name="SignInTAA" />
+                    <include name="ViewOrderHistory"/>
+                    <include name="ViewViewFavoriteProductProductDetail" />
+
+                </methods>
+            </class>
+            <class name="anhtester.testcase.HomeTest">
+                <methods>
+                    <include name="SignInTAA" />
+                    <include name="OrderProduct" />
+                    <include name="BuyQuickProducts" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

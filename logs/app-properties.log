@@ -86,3 +86,20 @@ Exception while taking screenshot: Cannot invoke "org.openqa.selenium.TakesScree
 org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=122.0.6261.112)
 [INFO ] 12-03-2024 15:31:12 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 15:39:48 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 12-03-2024 15:40:03 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 12-03-2024 15:40:10 [main] Log - Đây là test case chạy thành công: ViewOrderHistory
+[INFO ] 12-03-2024 15:40:21 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 12-03-2024 15:40:21 [main] Log - Đây là test case bị fail: BuyQuickProducts
+[ERROR] 12-03-2024 15:40:22 [main] Log - Đây là test case bị fail: OrderProduct
+[INFO ] 12-03-2024 15:40:28 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 15:43:50 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 12-03-2024 15:43:58 [main] Log - Đây là test case bị fail: AddProductToCart
+[ERROR] 12-03-2024 15:43:58 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 12-03-2024 15:43:58 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 12-03-2024 15:44:03 [main] Log - Kết thúc auto test
+[INFO ] 12-03-2024 15:47:49 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 12-03-2024 15:47:57 [main] Log - Đây là test case bị fail: AddProductToCart
+[ERROR] 12-03-2024 15:47:57 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 12-03-2024 15:47:57 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 12-03-2024 15:48:02 [main] Log - Kết thúc auto test
