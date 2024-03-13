@@ -69,13 +69,13 @@ public class HomePage {
 
     private By trangSucLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/span[1]");
     private By vongTayLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[2]/span[1]");
-    private By vongTayFilterVerifyText = By.xpath("//a[contains(text(),'Vòng tay thời tiết - mây và cầu vồng')]");
+    private By vongTayFilterVerifyText = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
     private By nhanLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[2]/ul[1]/li[4]/span[1]");
-    private By nhanFilterVerifyText = By.xpath("//a[contains(text(),'Nhẫn cặp dễ thương dành cho cặp đôi')]");
+    private By nhanFilterVerifyText = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
     private By phuKienTocLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/span[1]");
     private By tramCaiLeftMenu = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/aside[1]/ul[1]/li[3]/ul[1]/li[4]/span[1]");
 
-    private By tramCaiFilterVerifyText = By.xpath("//a[contains(text(),'Bộ 2 trâm cài nhật nguyệt')]");
+    private By tramCaiFilterVerifyText = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[1]/div[2]/h3[1]/a[1]");
     private By addCartBtn = By.xpath("//body/div[@id='main']/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/button[1]");
 
     private By buyQuickBtn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[3]");
@@ -299,7 +299,9 @@ public class HomePage {
         ViewQuickDetail(productFrame,viewQuickBtn);
         Thread.sleep(2000);
         validateHelper.clickElement(viewDetailBtn);
+        ScrollToEnd();
         Thread.sleep(2000);
+
     }
 
     public void SearchProduct(String product, String productOneText){

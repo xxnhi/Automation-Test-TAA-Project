@@ -24,14 +24,14 @@ public class HomeTest {
 
     //============= Trang san pham===========================
     private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
-    private By productFrameVtnsmn = By.xpath("//html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[4]");
-    private By productFrameVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]");
+    private By productFrameVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]");
+    private By productFrameVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]");
 
     private By productFrameVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]");
     private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
 
-    private By viewQuickVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[4]/div[3]/div[1]");
-    private By viewQuickVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
+    private By viewQuickVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[3]/div[1]");
+    private By viewQuickVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
 
     private By viewQuickVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]");
 
