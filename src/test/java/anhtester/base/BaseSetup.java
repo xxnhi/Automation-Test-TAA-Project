@@ -103,7 +103,7 @@ public class BaseSetup {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         //==========quan trong============
         validateHelper = new ValidateHelper(driver);
         //==========quan trong============

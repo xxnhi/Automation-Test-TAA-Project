@@ -26,18 +26,24 @@ public class HomeTest {
     private By productFrameBtmvc = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]");
     private By productFrameVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]");
     private By productFrameVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]");
+    private By productFrameVtttmvcv1 = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]");
+
 
     private By productFrameVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]");
     private By viewQuickBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[3]/div[1]");
 
     private By viewQuickVtnsmn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[3]/div[1]");
     private By viewQuickVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
+    private By viewQuickVtttmvcv1 = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]/div[3]/div[1]");
+
 
     private By viewQuickVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[3]/div[1]");
 
     private By viewDetailBtmvcBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[5]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By viewDetailVtnsmnBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[4]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
     private By viewDetailVtttmvcvBtn = By.xpath("/html[1]/body[1]/div[1]/div[7]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+    private By viewDetailVtttmvcvBtn1 = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
+
 
     private By viewDetailVcmcnmdt = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[2]/div[4]/div[1]/div[2]/div[5]/a[1]");
     private By viewDetailVtttmvcv = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/main[1]/div[1]/div[3]/div[4]/div[1]/div[2]/div[5]/a[1]/span[1]");
@@ -99,7 +105,7 @@ public class HomeTest {
     homePage.DeleteProductInCart("Delete success");
     }
     @Test (priority = 13)
-    public void IncreaseOrDecreaseProductInCart(){
+    public void IncreaseOrDecreaseProductInCart() {
         homePage.IncreaseOrDecreaseProductInCart();
     }
 
@@ -128,7 +134,7 @@ public class HomeTest {
         validateHelper.clickElement(addCartInDetail);
         Thread.sleep(3000);
         homePage.goToProductPage();
-        homePage.ViewProductDetail(productFrameVtttmvcv, viewQuickVtttmvcv, viewDetailVtttmvcv);
+        homePage.ViewProductDetail(productFrameVtttmvcv1, viewQuickVtttmvcv1, viewDetailVtttmvcvBtn1);
         validateHelper.clickElement(addCartInDetail);
     }
 

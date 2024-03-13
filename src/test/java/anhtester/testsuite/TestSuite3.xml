@@ -10,7 +10,7 @@
                 <methods>
                     <include name="SignInTAA" />
                     <include name="ViewOrderHistory"/>
-                    <include name="ViewViewFavoriteProductProductDetail" />
+                    <include name="ViewFavoriteProduct" />
 
                 </methods>
             </class>

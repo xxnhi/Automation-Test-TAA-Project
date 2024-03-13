@@ -166,7 +166,6 @@ public class HomePage {
         Assert.assertEquals(afterTotalText,"160000");
         // khi click vao +
         increaseProductInCart(plusBtn,"320000");
-
         // khi click vao +
         increaseProductInCart(plusBtn,"480000");
         // khi click vao -
@@ -183,16 +182,16 @@ public class HomePage {
         }
     }
 
-    public void increaseProductInCart(By plusBtn, String totalText){
-        // khi click vao -
-        validateHelper.clickElement(plusBtn);
+    public void increaseProductInCart(By plus1Btn, String totalText){
+        // khi click vao +
+        validateHelper.clickElement(plus1Btn);
         String afterClickMinusElement1 = driver.findElement(totalCost).getText();
         Assert.assertEquals(afterClickMinusElement1,totalText);
     }
 
-    public void decreaseProductInCart(By minusBtn, String totalText){
+    public void decreaseProductInCart(By minus1Btn, String totalText){
         // khi click vao -
-        validateHelper.clickElement(minusBtn);
+        validateHelper.clickElement(minus1Btn);
         String afterClickMinusElement1 = driver.findElement(totalCost).getText();
         Assert.assertEquals(afterClickMinusElement1,totalText);
     }
@@ -299,7 +298,7 @@ public class HomePage {
         ViewQuickDetail(productFrame,viewQuickBtn);
         Thread.sleep(2000);
         validateHelper.clickElement(viewDetailBtn);
-        ScrollToEnd();
+//        ScrollToEnd();
         Thread.sleep(2000);
 
     }

@@ -243,3 +243,133 @@ org.openqa.selenium.StaleElementReferenceException: stale element reference: sta
 [INFO ] 13-03-2024 14:35:06 [main] Log - Đây là test case chạy thành công: ViewArticle
 [INFO ] 13-03-2024 14:35:09 [main] Log - Đây là test case chạy thành công: FilterProduct
 [INFO ] 13-03-2024 14:35:15 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 14:44:46 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 14:45:03 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 14:45:09 [main] Log - Đây là test case chạy thành công: ViewOrderHistory
+[INFO ] 13-03-2024 14:45:24 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 14:45:26 [main] Log - Đây là test case chạy thành công: BuyQuickProducts
+[INFO ] 13-03-2024 14:45:26 [main] Log - Đây là test case chạy thành công: OrderProduct
+[INFO ] 13-03-2024 14:45:32 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 14:46:44 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 14:46:58 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 14:47:05 [main] Log - Đây là test case chạy thành công: ViewOrderHistory
+[INFO ] 13-03-2024 14:47:11 [main] Log - Đây là test case chạy thành công: ViewFavoriteProduct
+[INFO ] 13-03-2024 14:47:37 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 14:47:39 [main] Log - Đây là test case chạy thành công: BuyQuickProducts
+[INFO ] 13-03-2024 14:47:39 [main] Log - Đây là test case chạy thành công: OrderProduct
+[INFO ] 13-03-2024 14:47:45 [main] Log - Kết thúc auto test
+
+[INFO ] 13-03-2024 14:55:39 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 14:55:53 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 14:56:02 [main] Log - Đây là test case bị fail: AddProductToCart
+[ERROR] 13-03-2024 14:56:02 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 14:56:02 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 14:56:08 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 14:56:58 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 14:57:14 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 14:57:25 [main] Log - Đây là test case bị fail: AddProductToCart
+[ERROR] 13-03-2024 14:57:26 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 14:57:26 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 14:57:44 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:01:09 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:01:49 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 15:02:07 [main] Log - Đây là test case bị fail: AddProductToCart
+[ERROR] 13-03-2024 15:02:07 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:02:07 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:02:28 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:04:40 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:04:55 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 15:05:11 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[ERROR] 13-03-2024 15:05:11 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:05:12 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:05:27 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:08:50 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:09:07 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 15:09:07 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:09:07 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:09:14 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:10:26 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 13-03-2024 15:10:36 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 13-03-2024 15:10:36 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:10:37 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:10:43 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:13:28 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:13:47 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 15:13:47 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:13:47 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:13:53 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:19:36 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:19:52 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 15:20:12 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[ERROR] 13-03-2024 15:20:12 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 15:20:12 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 15:20:18 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:53:48 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:54:11 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 15:54:12 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 15:54:13 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 15:54:23 [main] Log - Đây là test case chạy thành công: DeleteProductInCart
+[INFO ] 13-03-2024 15:54:30 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:55:27 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 15:55:42 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 15:55:58 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[INFO ] 13-03-2024 15:55:58 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 15:55:59 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 15:56:10 [main] Log - Đây là test case chạy thành công: DeleteProductInCart
+[INFO ] 13-03-2024 15:56:16 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 15:57:19 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 13-03-2024 15:57:25 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 15:57:32 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:07:23 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 13-03-2024 16:07:29 [main] Log - Đây là test case bị fail: SignInTAA
+[ERROR] 13-03-2024 16:07:31 [main] Log - Đây là test case bị fail: AddProductToCart
+[INFO ] 13-03-2024 16:07:32 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:07:32 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 16:07:32 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 16:07:38 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:07:55 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:08:13 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:08:27 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[INFO ] 13-03-2024 16:08:27 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:08:28 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:08:39 [main] Log - Đây là test case chạy thành công: DeleteProductInCart
+[INFO ] 13-03-2024 16:08:44 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:09:10 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:09:29 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:09:43 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[INFO ] 13-03-2024 16:09:43 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:09:44 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:09:49 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:13:14 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:13:30 [main] Log - Đây là test case chạy thành công: SignInTAA
+[ERROR] 13-03-2024 16:13:38 [main] Log - Đây là test case bị fail: AddProductToCart
+[INFO ] 13-03-2024 16:13:39 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:13:39 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:13:45 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:14:55 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:15:09 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:15:10 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[INFO ] 13-03-2024 16:15:15 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:18:01 [main] Log - Đây là đoạn khởi động auto test
+[ERROR] 13-03-2024 16:18:09 [main] Log - Đây là test case bị fail: SignInTAA
+[INFO ] 13-03-2024 16:18:09 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:18:10 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:18:16 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:18:30 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:18:42 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:18:44 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:18:44 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:18:50 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:27:53 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:28:10 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:28:11 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[ERROR] 13-03-2024 16:28:11 [main] Log - Đây là test case bị fail: IncreaseOrDecreaseProductInCart
+[ERROR] 13-03-2024 16:28:12 [main] Log - Đây là test case bị fail: DeleteProductInCart
+[INFO ] 13-03-2024 16:28:17 [main] Log - Kết thúc auto test
+[INFO ] 13-03-2024 16:30:30 [main] Log - Đây là đoạn khởi động auto test
+[INFO ] 13-03-2024 16:30:47 [main] Log - Đây là test case chạy thành công: SignInTAA
+[INFO ] 13-03-2024 16:31:01 [main] Log - Đây là test case chạy thành công: AddProductToCart
+[INFO ] 13-03-2024 16:31:02 [main] Log - Đây là test case chạy thành công: ViewCartPage
+[INFO ] 13-03-2024 16:31:03 [main] Log - Đây là test case chạy thành công: IncreaseOrDecreaseProductInCart
+[INFO ] 13-03-2024 16:31:13 [main] Log - Đây là test case chạy thành công: DeleteProductInCart
+[INFO ] 13-03-2024 16:31:19 [main] Log - Kết thúc auto test
